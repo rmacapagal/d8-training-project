@@ -4,9 +4,9 @@ bin
 vendor
 node_modules
 
-# Ignore Drupal's file directory
-sites/*/files
-!sites/*/files/config*
+# Ignore Drupal's file directory except config files
+/sites/*/files
+!/sites/*/files/config*
 
 # Ignore local development files
 *local.*

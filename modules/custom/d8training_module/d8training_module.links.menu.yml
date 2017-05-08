@@ -1,0 +1,6 @@
+d8training_module.site_information:
+  title: 'Global site settings'
+  description: 'Configure site's global settings.'
+  parent: system.admin_config_system
+  route_name: d8training_module.global_settings
+  weight: 0

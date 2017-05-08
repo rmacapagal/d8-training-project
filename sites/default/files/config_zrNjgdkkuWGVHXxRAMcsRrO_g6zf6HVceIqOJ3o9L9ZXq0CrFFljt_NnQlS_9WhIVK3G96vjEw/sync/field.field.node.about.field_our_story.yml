@@ -1,0 +1,50 @@
+uuid: 33551e7b-f3bd-48f3-9187-9ae207aed1a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_our_story
+    - node.type.about
+    - paragraphs.paragraphs_type.our_story
+    - paragraphs.paragraphs_type.our_story_video
+  module:
+    - entity_reference_revisions
+id: node.about.field_our_story
+field_name: field_our_story
+entity_type: node
+bundle: about
+label: 'Our Story'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      our_story: our_story
+      our_story_video: our_story_video
+    target_bundles_drag_drop:
+      data_block:
+        weight: 8
+        enabled: false
+      hero_landing_single_image:
+        weight: 9
+        enabled: false
+      image_carousel_item:
+        weight: 10
+        enabled: false
+      our_story:
+        enabled: true
+        weight: 11
+      our_story_video:
+        enabled: true
+        weight: 12
+      speakers:
+        weight: 13
+        enabled: false
+      special_promo_item:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

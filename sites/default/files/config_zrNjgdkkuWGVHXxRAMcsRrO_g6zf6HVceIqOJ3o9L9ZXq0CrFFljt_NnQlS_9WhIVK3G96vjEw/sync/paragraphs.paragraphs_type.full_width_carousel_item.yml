@@ -1,0 +1,7 @@
+uuid: 4f9d5e94-1751-42a4-8472-d4ba23f47ec0
+langcode: en
+status: true
+dependencies: {  }
+id: full_width_carousel_item
+label: 'Full Width Carousel Item'
+behavior_plugins: {  }

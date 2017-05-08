@@ -1,0 +1,23 @@
+uuid: bc16acef-6b2a-4040-bfdd-b307fff34114
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_twitter_link
+    - paragraphs.paragraphs_type.speakers
+  module:
+    - link
+id: paragraph.speakers.field_twitter_link
+field_name: field_twitter_link
+entity_type: paragraph
+bundle: speakers
+label: 'Twitter Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 1
+field_type: link

@@ -1,0 +1,28 @@
+uuid: a0291b4d-1801-4fa6-89ae-55004ac8c75c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured_profiles
+    - node.type.about
+    - node.type.profile
+id: node.about.field_featured_profiles
+field_name: field_featured_profiles
+entity_type: node
+bundle: about
+label: 'Featured Profiles'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      profile: profile
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,17 @@
+uuid: 07599524-ab72-4e55-863a-607f33fa2f85
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Event
+type: event
+description: 'Use for <em>event</em>''s detail page.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

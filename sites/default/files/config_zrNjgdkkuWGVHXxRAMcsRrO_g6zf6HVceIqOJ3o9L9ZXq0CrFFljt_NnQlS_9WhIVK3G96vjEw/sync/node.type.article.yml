@@ -1,0 +1,19 @@
+uuid: a26eb681-fe02-4adf-8227-42b0ddf288b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: AeW1SEDgb1OTQACAWGhzvMknMYAJlcZu0jljfeU3oso
+name: 'Blog Article'
+type: article
+description: 'Use <em>articles</em> for blog posts.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

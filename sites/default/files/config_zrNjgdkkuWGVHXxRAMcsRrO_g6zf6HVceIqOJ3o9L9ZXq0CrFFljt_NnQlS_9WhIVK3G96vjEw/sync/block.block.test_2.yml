@@ -1,0 +1,25 @@
+uuid: fff92c9b-786b-4a79-a028-c4a83298c9a0
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a074b7bd-c29e-4aaa-b819-a70fff17f2ff'
+  module:
+    - block_content
+  theme:
+    - d8training
+id: test_2
+theme: d8training
+region: top_bar
+weight: 0
+provider: null
+plugin: 'block_content:a074b7bd-c29e-4aaa-b819-a70fff17f2ff'
+settings:
+  id: 'block_content:a074b7bd-c29e-4aaa-b819-a70fff17f2ff'
+  label: test
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

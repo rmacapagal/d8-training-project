@@ -1,0 +1,19 @@
+uuid: 3f092989-c42a-4c27-b6d4-f97672881e7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_author
+    - paragraphs.paragraphs_type.full_width_carousel_item
+id: paragraph.full_width_carousel_item.field_author
+field_name: field_author
+entity_type: paragraph
+bundle: full_width_carousel_item
+label: Author
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

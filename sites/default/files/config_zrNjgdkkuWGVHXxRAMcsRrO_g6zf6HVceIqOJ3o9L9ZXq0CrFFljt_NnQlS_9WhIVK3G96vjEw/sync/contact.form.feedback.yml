@@ -1,0 +1,14 @@
+uuid: 03100315-a4b5-460a-9d40-fb926f1b531b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Website feedback'
+recipients:
+  - rachel@codeandtheory.com
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''

@@ -1,0 +1,21 @@
+uuid: 7e8cc7b4-2194-4da0-8be2-343ad2164fbe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_left_content
+    - node.type.reservation
+  module:
+    - text
+id: node.reservation.field_left_content
+field_name: field_left_content
+entity_type: node
+bundle: reservation
+label: 'Left Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

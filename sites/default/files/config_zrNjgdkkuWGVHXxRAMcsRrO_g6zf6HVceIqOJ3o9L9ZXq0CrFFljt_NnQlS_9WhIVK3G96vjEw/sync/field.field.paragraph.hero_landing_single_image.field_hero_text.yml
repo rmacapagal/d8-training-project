@@ -1,0 +1,19 @@
+uuid: 286d9216-c421-47c2-9ee7-e2d4c8dc51ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hero_text
+    - paragraphs.paragraphs_type.hero_landing_single_image
+id: paragraph.hero_landing_single_image.field_hero_text
+field_name: field_hero_text
+entity_type: paragraph
+bundle: hero_landing_single_image
+label: 'Hero Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

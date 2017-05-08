@@ -1,0 +1,54 @@
+uuid: dd3b7b67-33ae-4400-9f9a-6b0af8b2f5ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header
+    - node.type.home
+    - paragraphs.paragraphs_type.image_carousel_item
+  module:
+    - entity_reference_revisions
+id: node.home.field_header
+field_name: field_header
+entity_type: node
+bundle: home
+label: Header
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      image_carousel_item: image_carousel_item
+    target_bundles_drag_drop:
+      data_block:
+        weight: 10
+        enabled: false
+      hero_landing_image_carousel_:
+        weight: 11
+        enabled: false
+      hero_landing_single_image:
+        weight: 12
+        enabled: false
+      image_carousel_item:
+        enabled: true
+        weight: 13
+      our_story:
+        weight: 14
+        enabled: false
+      our_story_video:
+        weight: 15
+        enabled: false
+      speakers:
+        weight: 16
+        enabled: false
+      special_promo:
+        weight: 17
+        enabled: false
+      special_promo_item:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

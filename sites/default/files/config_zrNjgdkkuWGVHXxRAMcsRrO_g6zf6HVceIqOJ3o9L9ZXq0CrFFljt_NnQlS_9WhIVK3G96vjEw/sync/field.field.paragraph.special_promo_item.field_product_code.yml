@@ -1,0 +1,19 @@
+uuid: ba698f42-f87b-49c2-b3da-77a812ebe76d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_product_code
+    - paragraphs.paragraphs_type.special_promo_item
+id: paragraph.special_promo_item.field_product_code
+field_name: field_product_code
+entity_type: paragraph
+bundle: special_promo_item
+label: 'Product Code'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

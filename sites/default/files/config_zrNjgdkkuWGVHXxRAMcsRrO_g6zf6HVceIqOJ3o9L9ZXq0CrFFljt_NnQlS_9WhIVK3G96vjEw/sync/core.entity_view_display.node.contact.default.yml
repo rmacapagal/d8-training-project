@@ -1,0 +1,43 @@
+uuid: 98139c68-2ac6-4430-ab60-f41430a87d21
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.contact.field_address
+    - field.field.node.contact.field_contact_numbers
+    - field.field.node.contact.field_email_address
+    - node.type.contact
+  module:
+    - user
+id: node.contact.default
+targetEntityType: node
+bundle: contact
+mode: default
+content:
+  field_address:
+    weight: 101
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_contact_numbers:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_email_address:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

@@ -1,0 +1,18 @@
+uuid: 110c6e0f-9ac3-4198-8036-c6fcdd14035d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.menu_landing
+  module:
+    - user
+id: node.menu_landing.teaser
+targetEntityType: node
+bundle: menu_landing
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden: {  }

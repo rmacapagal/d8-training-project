@@ -1,0 +1,36 @@
+uuid: 30766129-8d54-4b46-abf2-bc5d9aa8267c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_landing_single_image.field_hero_image
+    - field.field.paragraph.hero_landing_single_image.field_hero_text
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.hero_landing_single_image
+  module:
+    - image
+id: paragraph.hero_landing_single_image.default
+targetEntityType: paragraph
+bundle: hero_landing_single_image
+mode: default
+content:
+  field_hero_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_hero_text:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

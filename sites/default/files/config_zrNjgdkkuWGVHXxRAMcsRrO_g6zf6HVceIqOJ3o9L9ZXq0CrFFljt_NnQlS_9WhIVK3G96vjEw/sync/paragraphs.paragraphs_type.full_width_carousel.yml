@@ -1,0 +1,7 @@
+uuid: 7e259591-0ab2-4534-83c9-bfaaf5104b91
+langcode: en
+status: true
+dependencies: {  }
+id: full_width_carousel
+label: 'Full Width Carousel'
+behavior_plugins: {  }

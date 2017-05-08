@@ -1,0 +1,19 @@
+uuid: 96f7fb88-1b27-4c1a-9709-dd8c364cd142
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.today_s_specials_item
+id: paragraph.today_s_specials_item.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: today_s_specials_item
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

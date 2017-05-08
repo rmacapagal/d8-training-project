@@ -1,0 +1,19 @@
+uuid: d6fb100a-298e-44a1-915b-d3a80aa4174e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_excerpt
+    - paragraphs.paragraphs_type.our_story_video
+id: paragraph.our_story_video.field_excerpt
+field_name: field_excerpt
+entity_type: paragraph
+bundle: our_story_video
+label: Excerpt
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,18 @@
+uuid: 691bf0da-65bd-46c3-ac63-d673592d914d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Reservation (Landing)'
+type: reservation
+description: 'Use for <em>Reservation</em> landing page.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

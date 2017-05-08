@@ -1,0 +1,54 @@
+uuid: 1261342d-7f48-4794-a320-979531135e6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slider
+    - paragraphs.paragraphs_type.full_width_carousel
+    - paragraphs.paragraphs_type.full_width_carousel_item
+  module:
+    - entity_reference_revisions
+id: paragraph.full_width_carousel.field_slider
+field_name: field_slider
+entity_type: paragraph
+bundle: full_width_carousel
+label: Items
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      full_width_carousel_item: full_width_carousel_item
+    target_bundles_drag_drop:
+      data_block:
+        weight: 10
+        enabled: false
+      full_width_carousel:
+        weight: 11
+        enabled: false
+      full_width_carousel_item:
+        enabled: true
+        weight: 12
+      hero_landing_single_image:
+        weight: 13
+        enabled: false
+      image_carousel_item:
+        weight: 14
+        enabled: false
+      our_story:
+        weight: 15
+        enabled: false
+      our_story_video:
+        weight: 16
+        enabled: false
+      speakers:
+        weight: 17
+        enabled: false
+      special_promo_item:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

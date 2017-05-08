@@ -1,0 +1,48 @@
+uuid: ad55f8e6-3557-4f92-b43c-d33765c324ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_image
+    - node.type.about
+    - paragraphs.paragraphs_type.hero_landing_single_image
+  module:
+    - entity_reference_revisions
+id: node.about.field_header_image
+field_name: field_header_image
+entity_type: node
+bundle: about
+label: 'Header Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      hero_landing_single_image: hero_landing_single_image
+    target_bundles_drag_drop:
+      data_block:
+        weight: 8
+        enabled: false
+      hero_landing_single_image:
+        enabled: true
+        weight: 9
+      image_carousel_item:
+        weight: 10
+        enabled: false
+      our_story:
+        weight: 11
+        enabled: false
+      our_story_video:
+        weight: 12
+        enabled: false
+      speakers:
+        weight: 13
+        enabled: false
+      special_promo_item:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

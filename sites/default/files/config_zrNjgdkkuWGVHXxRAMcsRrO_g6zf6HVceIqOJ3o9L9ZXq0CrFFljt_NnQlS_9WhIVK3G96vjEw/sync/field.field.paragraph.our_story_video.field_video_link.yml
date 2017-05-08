@@ -1,0 +1,23 @@
+uuid: ab9b151d-238e-4c79-ac97-d188449b5607
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_video_link
+    - paragraphs.paragraphs_type.our_story_video
+  module:
+    - link
+id: paragraph.our_story_video.field_video_link
+field_name: field_video_link
+entity_type: paragraph
+bundle: our_story_video
+label: 'Video Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

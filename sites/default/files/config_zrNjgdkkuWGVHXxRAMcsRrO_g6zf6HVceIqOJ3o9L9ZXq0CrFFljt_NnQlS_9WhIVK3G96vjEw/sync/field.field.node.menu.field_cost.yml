@@ -1,0 +1,23 @@
+uuid: d563f422-678c-450d-87bf-6b4e0dc599c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cost
+    - node.type.menu
+id: node.menu.field_cost
+field_name: field_cost
+entity_type: node
+bundle: menu
+label: Cost
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

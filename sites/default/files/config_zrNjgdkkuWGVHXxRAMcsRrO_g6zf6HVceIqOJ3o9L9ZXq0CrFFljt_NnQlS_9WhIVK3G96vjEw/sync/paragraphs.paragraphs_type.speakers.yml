@@ -1,0 +1,7 @@
+uuid: 68834527-8b56-4b29-b6f8-3753aae2b41b
+langcode: en
+status: true
+dependencies: {  }
+id: speakers
+label: 'Event Speaker'
+behavior_plugins: {  }

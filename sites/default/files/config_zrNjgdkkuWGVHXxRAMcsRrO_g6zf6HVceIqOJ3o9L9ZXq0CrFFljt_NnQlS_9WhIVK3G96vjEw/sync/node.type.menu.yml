@@ -1,0 +1,18 @@
+uuid: c8553113-53ed-467f-a8f3-57482e50818b
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Menu Item'
+type: menu
+description: 'Use for items in the <em>Menu</em>.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

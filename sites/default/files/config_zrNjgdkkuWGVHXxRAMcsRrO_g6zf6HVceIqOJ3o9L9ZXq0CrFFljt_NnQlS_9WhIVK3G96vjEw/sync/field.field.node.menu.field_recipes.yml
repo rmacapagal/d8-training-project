@@ -1,0 +1,19 @@
+uuid: 66e7e430-3df0-4f13-8a80-4775ae0e14ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recipes
+    - node.type.menu
+id: node.menu.field_recipes
+field_name: field_recipes
+entity_type: node
+bundle: menu
+label: Recipes
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

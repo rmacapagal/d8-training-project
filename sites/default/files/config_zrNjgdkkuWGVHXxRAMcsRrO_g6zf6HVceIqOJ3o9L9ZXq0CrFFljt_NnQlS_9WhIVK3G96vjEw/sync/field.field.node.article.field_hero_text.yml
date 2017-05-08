@@ -1,0 +1,19 @@
+uuid: e186eb65-12c9-4797-b8d4-194b0c4c929a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_text
+    - node.type.article
+id: node.article.field_hero_text
+field_name: field_hero_text
+entity_type: node
+bundle: article
+label: 'Hero Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

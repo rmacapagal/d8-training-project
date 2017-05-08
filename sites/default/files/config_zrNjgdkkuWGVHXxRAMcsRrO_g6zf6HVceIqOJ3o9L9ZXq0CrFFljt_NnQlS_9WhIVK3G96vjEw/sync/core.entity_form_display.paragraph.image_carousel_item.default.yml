@@ -1,0 +1,55 @@
+uuid: 1316e442-faa9-41f5-a22f-2a879438ee91
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_carousel_item.field_call_to_action
+    - field.field.paragraph.image_carousel_item.field_image
+    - field.field.paragraph.image_carousel_item.field_sub_title
+    - field.field.paragraph.image_carousel_item.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.image_carousel_item
+  module:
+    - image
+    - link
+id: paragraph.image_carousel_item.default
+targetEntityType: paragraph
+bundle: image_carousel_item
+mode: default
+content:
+  field_call_to_action:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_image:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_sub_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

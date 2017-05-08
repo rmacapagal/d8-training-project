@@ -1,0 +1,23 @@
+uuid: 77973347-6869-4255-b01b-d7d11605183a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_behance_link
+    - paragraphs.paragraphs_type.speakers
+  module:
+    - link
+id: paragraph.speakers.field_behance_link
+field_name: field_behance_link
+entity_type: paragraph
+bundle: speakers
+label: 'Behance Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 1
+field_type: link

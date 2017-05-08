@@ -1,0 +1,22 @@
+uuid: 7d556c27-9ae1-4d03-af26-e75890170093
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - d8training
+_core:
+  default_config_hash: za-39d5WDUg6XvbyqSnuVYEeq6QM4qKJxW8MnoAha5A
+id: d8training_search
+theme: d8training
+region: sidebar
+weight: -4
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+visibility: {  }

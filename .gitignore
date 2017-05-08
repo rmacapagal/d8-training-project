@@ -6,6 +6,7 @@ node_modules
 
 # Ignore Drupal's file directory
 sites/*/files
+!sites/*/files/config*
 
 # Ignore local development files
 *local.*

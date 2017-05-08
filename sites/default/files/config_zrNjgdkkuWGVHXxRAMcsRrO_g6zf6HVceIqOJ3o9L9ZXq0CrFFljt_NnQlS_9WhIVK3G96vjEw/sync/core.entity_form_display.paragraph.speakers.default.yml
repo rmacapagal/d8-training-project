@@ -1,0 +1,91 @@
+uuid: f8ac7072-c9a1-40c9-950f-677cf9927073
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.speakers.field_behance_link
+    - field.field.paragraph.speakers.field_dribble_link
+    - field.field.paragraph.speakers.field_facebook_link
+    - field.field.paragraph.speakers.field_image
+    - field.field.paragraph.speakers.field_instagram_link
+    - field.field.paragraph.speakers.field_position
+    - field.field.paragraph.speakers.field_speaker_name
+    - field.field.paragraph.speakers.field_twitter_link
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.speakers
+  module:
+    - image
+    - link
+id: paragraph.speakers.default
+targetEntityType: paragraph
+bundle: speakers
+mode: default
+content:
+  field_behance_link:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_dribble_link:
+    weight: 7
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_facebook_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_instagram_link:
+    weight: 6
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_position:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_speaker_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_twitter_link:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

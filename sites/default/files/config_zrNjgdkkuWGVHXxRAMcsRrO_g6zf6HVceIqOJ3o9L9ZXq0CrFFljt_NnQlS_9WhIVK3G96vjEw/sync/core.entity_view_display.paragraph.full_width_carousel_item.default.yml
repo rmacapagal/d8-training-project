@@ -1,0 +1,39 @@
+uuid: eb651c44-6846-4489-b786-8f92db861dc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.full_width_carousel_item.field_author
+    - field.field.paragraph.full_width_carousel_item.field_position
+    - field.field.paragraph.full_width_carousel_item.field_text
+    - paragraphs.paragraphs_type.full_width_carousel_item
+id: paragraph.full_width_carousel_item.default
+targetEntityType: paragraph
+bundle: full_width_carousel_item
+mode: default
+content:
+  field_author:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_position:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_text:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

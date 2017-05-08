@@ -1,0 +1,19 @@
+uuid: e786f02f-0841-46e5-a87e-40d586426bf0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.today_s_specials_item
+id: paragraph.today_s_specials_item.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: today_s_specials_item
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

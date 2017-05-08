@@ -1,0 +1,9 @@
+uuid: 0f782bcb-338b-469a-bf13-5310906c5081
+langcode: en
+status: true
+dependencies: {  }
+name: 'Menu Categories'
+vid: menu_categories
+description: ''
+hierarchy: 0
+weight: 0

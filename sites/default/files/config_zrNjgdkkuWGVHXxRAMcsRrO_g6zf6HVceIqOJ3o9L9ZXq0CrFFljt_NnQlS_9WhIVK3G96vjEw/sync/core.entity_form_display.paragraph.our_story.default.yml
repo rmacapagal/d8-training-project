@@ -1,0 +1,55 @@
+uuid: a1cd3e4a-e72a-4bd4-9d27-df74557abaf3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.our_story.field_content
+    - field.field.paragraph.our_story.field_excerpt
+    - field.field.paragraph.our_story.field_left_image
+    - field.field.paragraph.our_story.field_right_image
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.our_story
+  module:
+    - image
+id: paragraph.our_story.default
+targetEntityType: paragraph
+bundle: our_story
+mode: default
+content:
+  field_content:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_excerpt:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_left_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_right_image:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

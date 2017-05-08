@@ -1,0 +1,38 @@
+uuid: aa5caf8f-38c1-4f5a-98fb-b0bdbf69a768
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.menu_landing.field_header_image
+    - field.field.node.menu_landing.field_todays_specials
+    - node.type.menu_landing
+  module:
+    - entity_reference_revisions
+    - user
+id: node.menu_landing.default
+targetEntityType: node
+bundle: menu_landing
+mode: default
+content:
+  field_header_image:
+    weight: 101
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_todays_specials:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

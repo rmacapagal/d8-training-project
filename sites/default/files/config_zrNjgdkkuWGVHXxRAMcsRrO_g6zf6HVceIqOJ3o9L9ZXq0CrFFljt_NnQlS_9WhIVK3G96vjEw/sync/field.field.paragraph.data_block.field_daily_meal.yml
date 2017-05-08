@@ -1,0 +1,23 @@
+uuid: baf9cdf3-325b-4930-a2d0-e72a8eb17600
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_daily_meal
+    - paragraphs.paragraphs_type.data_block
+id: paragraph.data_block.field_daily_meal
+field_name: field_daily_meal
+entity_type: paragraph
+bundle: data_block
+label: 'Daily Meal'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

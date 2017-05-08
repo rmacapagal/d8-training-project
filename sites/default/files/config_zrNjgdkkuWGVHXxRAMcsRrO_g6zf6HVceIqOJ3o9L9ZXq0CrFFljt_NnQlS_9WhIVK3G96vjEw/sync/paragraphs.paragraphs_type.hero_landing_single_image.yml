@@ -1,0 +1,7 @@
+uuid: 898facfb-678c-4645-839e-1614149d0a3d
+langcode: en
+status: true
+dependencies: {  }
+id: hero_landing_single_image
+label: 'Hero Image'
+behavior_plugins: {  }

@@ -1,0 +1,18 @@
+uuid: 0c24de18-7924-4fb3-8e30-1d48daf4baa3
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Contact (Landing)'
+type: contact
+description: 'Use for <em>Contact Us</em> landing page.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

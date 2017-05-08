@@ -1,0 +1,7 @@
+uuid: 95c1cf91-9e91-441d-a7ff-e4305c83e32d
+langcode: en
+status: true
+dependencies: {  }
+id: our_story
+label: 'Our Story (Image)'
+behavior_plugins: {  }

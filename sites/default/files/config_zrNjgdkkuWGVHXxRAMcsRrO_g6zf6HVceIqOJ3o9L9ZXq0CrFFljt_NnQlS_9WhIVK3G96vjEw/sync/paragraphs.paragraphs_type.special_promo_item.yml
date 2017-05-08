@@ -1,0 +1,7 @@
+uuid: 9e3df47f-ef98-42d4-aaf3-1a955d82cbcb
+langcode: en
+status: true
+dependencies: {  }
+id: special_promo_item
+label: 'Special Promo Item'
+behavior_plugins: {  }

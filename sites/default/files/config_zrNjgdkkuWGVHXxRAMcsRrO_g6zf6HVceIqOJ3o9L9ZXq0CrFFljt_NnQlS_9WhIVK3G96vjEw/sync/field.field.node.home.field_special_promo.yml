@@ -1,0 +1,51 @@
+uuid: 26714bee-f7da-43c9-b89a-50533738452a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_special_promo
+    - node.type.home
+    - paragraphs.paragraphs_type.special_promo_item
+  module:
+    - entity_reference_revisions
+id: node.home.field_special_promo
+field_name: field_special_promo
+entity_type: node
+bundle: home
+label: 'Special Promo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      special_promo_item: special_promo_item
+    target_bundles_drag_drop:
+      data_block:
+        weight: 9
+        enabled: false
+      hero_landing_single_image:
+        weight: 10
+        enabled: false
+      image_carousel_item:
+        weight: 11
+        enabled: false
+      our_story:
+        weight: 12
+        enabled: false
+      our_story_video:
+        weight: 13
+        enabled: false
+      speakers:
+        weight: 14
+        enabled: false
+      special_promo:
+        weight: 15
+        enabled: false
+      special_promo_item:
+        enabled: true
+        weight: 16
+field_type: entity_reference_revisions

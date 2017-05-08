@@ -1,0 +1,57 @@
+uuid: 495fdcc0-39d8-4f88-8444-6067e34b4681
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_todays_specials
+    - node.type.menu_landing
+    - paragraphs.paragraphs_type.today_s_specials_item
+  module:
+    - entity_reference_revisions
+id: node.menu_landing.field_todays_specials
+field_name: field_todays_specials
+entity_type: node
+bundle: menu_landing
+label: 'Today''s Specials'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      today_s_specials_item: today_s_specials_item
+    target_bundles_drag_drop:
+      data_block:
+        weight: 11
+        enabled: false
+      full_width_carousel:
+        weight: 12
+        enabled: false
+      full_width_carousel_item:
+        weight: 13
+        enabled: false
+      hero_landing_single_image:
+        weight: 14
+        enabled: false
+      image_carousel_item:
+        weight: 15
+        enabled: false
+      our_story:
+        weight: 16
+        enabled: false
+      our_story_video:
+        weight: 17
+        enabled: false
+      speakers:
+        weight: 18
+        enabled: false
+      special_promo_item:
+        weight: 19
+        enabled: false
+      today_s_specials_item:
+        enabled: true
+        weight: 20
+field_type: entity_reference_revisions

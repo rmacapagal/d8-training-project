@@ -1,0 +1,23 @@
+uuid: 19e522f3-e54c-4130-ac79-1c718cd26fd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_parcel_today
+    - paragraphs.paragraphs_type.data_block
+id: paragraph.data_block.field_parcel_today
+field_name: field_parcel_today
+entity_type: paragraph
+bundle: data_block
+label: 'Parcel Today'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

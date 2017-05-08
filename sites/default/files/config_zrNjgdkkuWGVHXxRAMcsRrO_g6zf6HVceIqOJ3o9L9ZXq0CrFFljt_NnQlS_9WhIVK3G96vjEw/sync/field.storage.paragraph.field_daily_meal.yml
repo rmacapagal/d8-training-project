@@ -1,0 +1,20 @@
+uuid: 6de4c24f-9411-4f03-85fe-cd48abe8d231
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_daily_meal
+field_name: field_daily_meal
+entity_type: paragraph
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

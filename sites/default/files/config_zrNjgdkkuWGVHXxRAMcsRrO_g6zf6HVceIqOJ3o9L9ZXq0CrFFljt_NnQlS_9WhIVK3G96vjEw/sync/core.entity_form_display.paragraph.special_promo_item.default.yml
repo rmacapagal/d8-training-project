@@ -1,0 +1,53 @@
+uuid: 48e21362-aaf0-4585-8723-647af745f62e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.special_promo_item.field_cost
+    - field.field.paragraph.special_promo_item.field_image
+    - field.field.paragraph.special_promo_item.field_product_code
+    - field.field.paragraph.special_promo_item.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.special_promo_item
+  module:
+    - image
+id: paragraph.special_promo_item.default
+targetEntityType: paragraph
+bundle: special_promo_item
+mode: default
+content:
+  field_cost:
+    weight: 2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_product_code:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

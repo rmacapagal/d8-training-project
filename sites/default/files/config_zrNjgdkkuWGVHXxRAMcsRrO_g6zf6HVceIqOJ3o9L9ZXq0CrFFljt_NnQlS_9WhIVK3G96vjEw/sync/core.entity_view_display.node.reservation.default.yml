@@ -1,0 +1,45 @@
+uuid: 94a227c0-59f2-4b01-9ba0-aca80b019701
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.reservation.field_header_image
+    - field.field.node.reservation.field_left_content
+    - field.field.node.reservation.field_right_content
+    - node.type.reservation
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.reservation.default
+targetEntityType: node
+bundle: reservation
+mode: default
+content:
+  field_header_image:
+    weight: 101
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_left_content:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_right_content:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

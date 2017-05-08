@@ -1,0 +1,17 @@
+uuid: 4021289a-e3d3-4ec6-937b-e2ec01ea27bb
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Profile
+type: profile
+description: 'Use for chef''s <em>profile</em>.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

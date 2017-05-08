@@ -1,0 +1,7 @@
+uuid: 0ed5c86b-38ad-49e4-a3d3-10dde6362c64
+langcode: en
+status: true
+dependencies: {  }
+id: today_s_specials_item
+label: 'Today''s Specials Item'
+behavior_plugins: {  }

@@ -1,0 +1,99 @@
+global:
+  css:
+    theme:
+      vendor-dist/css/normalize.css: {}
+      vendor-dist/css/animate.css: {}
+      vendor-dist/css/responsive.css: {}
+      dist/css/global.css: {}
+      dist/css/main.css: {}
+  js:
+    dist/js/global.js: {}
+  dependencies: 
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+    - d8training/bootstrap
+    - d8training/font-awesome
+
+header-home:
+  css:
+    theme:
+      dist/css/header.css: {}
+  dependencies:
+    - d8training/header-slider
+    - d8training/top-bar
+    - d8training/main-menu
+    - d8training/search
+
+footer:
+  css:
+    theme:
+      dist/css/footer.css: {}
+  dependencies:
+    - d8training/wow
+
+header-slider:
+  css:
+    theme:
+      dist/css/header-slider.css: {}
+  js:
+    dist/js/header-slider.js: {}
+  dependencies:
+    - d8training/pogo-slider
+
+main-menu:
+  css:
+    theme:
+      dist/css/main-menu.css: {}
+  js:
+    dist/js/main-menu.js: {}
+  dependencies:
+    - d8training/jquery-sticky
+
+search:
+  css:
+    theme:
+      dist/css/search.css: {}
+  js:
+    dist/js/search.js: {}
+
+top-bar:
+  css:
+    theme:
+      dist/css/top-bar.css: {}
+
+bootstrap:
+  css:
+    theme:
+      vendor-dist/css/bootstrap.min.css: {}
+  js:
+    vendor-dist/js/vendor/bootstrap.min.js: {}
+
+font-awesome:
+  css:
+    theme:
+      vendor-dist/css/font-awesome.min.css: {}
+
+owl-carousel:
+  css:
+    theme:
+      vendor-dist/css/owl.carousel.css: {}
+  js:
+    vendor-dist/js/owl.carousel.min.js: {}
+
+pogo-slider:
+  css:
+    theme:
+      vendor-dist/css/pogo-slider.css: {}
+  js:
+    vendor-dist/js/jquery.pogo-slider.js: {}
+
+jquery-sticky:
+  js:
+    vendor-dist/js/jquery.sticky.js: {}
+
+wow:
+  js:
+    vendor-dist/js/wow.min.js: {}
+    dist/js/wow.js: {}

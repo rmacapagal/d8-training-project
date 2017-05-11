@@ -4,6 +4,19 @@ description: C&T D8 Training Theme with KSS styleguide
 package: Other
 core: 8.x
 
+# The "libraries:" section will add a library to _all_ pages.
+libraries:
+  - d8training/global
+
+# This section is used by the contrib module, Component Libraries. It allows you
+# to reference .twig files in your sass/ directory by using the Twig namespace:
+# @d8training
+# See https://www.drupal.org/project/components for more information.
+component-libraries:
+  d8training:
+    paths:
+      - src/kss/components
+
 regions:
   header: Header
   content: Content

@@ -41,6 +41,16 @@ class GlobalSettingsForm extends ConfigFormBase {
         '#title' => $this->t('Address'),
         '#default_value' => $config->get('address'),
       ],
+      'cta' => [
+        '#type' => 'textfield',
+        '#title' => $this->t('Call to Action (Title)'),
+        '#default_value' => $config->get('cta'),
+      ],
+      'cta_url' => [
+        '#type' => 'url',
+        '#title' => $this->t('Call to Action (Url)'),
+        '#default_value' => $config->get('cta_url'),
+      ],
       'social_networks' => [
         '#type' => 'details',
         '#title' => t('Social Networks'),
@@ -84,6 +94,11 @@ class GlobalSettingsForm extends ConfigFormBase {
           '#type' => 'url',
           '#title' => $this->t('Behance'),
           '#default_value' => $config->get('behance'),
+        ],
+        'rss' => [
+          '#type' => 'url',
+          '#title' => $this->t('RSS'),
+          '#default_value' => $config->get('rss'),
         ]
       ]
     ];
@@ -98,7 +113,7 @@ class GlobalSettingsForm extends ConfigFormBase {
           'file_validate_is_image' => [],
           'file_validate_extensions' => ['gif png jpg jpeg'],
         ],
-        '#upload_location' => 'public://primary-logo',
+        '#upload_location' => 'public://images/',
         '#default_value' => [$config->get('primary_logo')],
       ],
       'secondary_logo' => [
@@ -108,7 +123,7 @@ class GlobalSettingsForm extends ConfigFormBase {
           'file_validate_is_image' => [],
           'file_validate_extensions' => ['gif png jpg jpeg'],
         ],
-        '#upload_location' => 'public://secondary-logo',
+        '#upload_location' => 'public://images/',
         '#default_value' => [$config->get('secondary_logo')],
       ],
       'cta' => [
@@ -127,7 +142,7 @@ class GlobalSettingsForm extends ConfigFormBase {
           'file_validate_is_image' => [],
           'file_validate_extensions' => ['gif png jpg jpeg'],
         ],
-        '#upload_location' => 'public://footer-logo',
+        '#upload_location' => 'public://images/',
         '#default_value' => [$config->get('footer_logo')],
       ],
       'copyright' => [
@@ -154,9 +169,11 @@ class GlobalSettingsForm extends ConfigFormBase {
       ->set('pinterest', $form_state->getValue('pinterest'))
       ->set('behance', $form_state->getValue('behance'))
       ->set('skype', $form_state->getValue('skype'))
+      ->set('rss', $form_state->getValue('rss'))
       ->set('primary_logo', reset($form_state->getValue('primary_logo')))
       ->set('secondary_logo', reset($form_state->getValue('secondary_logo')))
       ->set('cta', $form_state->getValue('cta'))
+      ->set('cta_url', $form_state->getValue('cta_url'))
       ->set('footer_logo', reset($form_state->getValue('footer_logo')))
       ->set('copyright', strip_tags($form_state->getValue('copyright')['value'], '<span><a>'))
       ->save();

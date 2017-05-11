@@ -16,6 +16,7 @@ class Helper {
     $tree = $menu_tree->load($menu_name, $parameters);
     $tree = $menu_tree->transform($tree, $manipulators);
     $menu = $menu_tree->build($tree);
+    
     return $menu;
   }
 }

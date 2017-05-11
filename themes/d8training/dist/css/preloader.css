@@ -1,0 +1,40 @@
+/*------------------------------
+  PRELOADER
+-------------------------------*/
+.preloader {
+  background: white none repeat scroll 0 0;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 999999; }
+
+.preloader-spinner {
+  animation: 1.5s linear 0s normal none infinite running loader;
+  width: 60px;
+  height: 60px;
+  font-size: 35px;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  margin-left: -30px;
+  top: 50%;
+  margin-top: -30px;
+  padding-top: 12px;
+  z-index: 99;
+  background: #1a1a1a;
+  color: #d0963e; }
+
+@keyframes loader {
+  0% {
+    box-shadow: 0 0 0 0px rgba(208, 150, 62, 0); }
+  25% {
+    box-shadow: 0 0 0 0px rgba(208, 150, 62, 0.5), 0 0 0 10px rgba(208, 150, 62, 0.4); }
+  50% {
+    box-shadow: 0 0 0 10px rgba(208, 150, 62, 0.5), 0 0 0 20px rgba(208, 150, 62, 0.3); }
+  75% {
+    box-shadow: 0 0 0 10px rgba(208, 150, 62, 0.5), 0 0 0 10px rgba(208, 150, 62, 0.2); }
+  100% {
+    box-shadow: 0 0 0 0px rgba(208, 150, 62, 0.4); } }
+
+/*# sourceMappingURL=preloader.css.map */

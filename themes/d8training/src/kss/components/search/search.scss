@@ -156,3 +156,27 @@ a.search-form-trigger::before {
   opacity: 1;
   visibility: visible;
 }
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .search-form-area {
+    padding: 25px 15px;
+  }
+  .is-sticky .search-form-area {
+    padding: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .search-form-area {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .search-form-area {
+    display: none;
+  }
+  .search-form-area {
+    display: none;
+  }
+}

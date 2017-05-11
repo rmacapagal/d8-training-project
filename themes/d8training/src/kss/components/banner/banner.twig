@@ -1,0 +1,21 @@
+<!--PAGE BANNER AREA-->
+<div class="page-banner-area">
+  <div class="container wow fadeIn">
+    <div class="row">
+      <div class="col-md-12 col-xs-12">
+        <div class="banner-text">
+          <h1>{{ title }}</h1>
+          {% if breadcrumbs %}
+          <ul class="page-location">
+            {% for item in breadcrumbs %}
+            <li{% if loop.last %} class="active"{% endif %}><a href="{{ item.url }}">{{ item.name }}</a></li>
+            {% if not loop.last %}<li><i class="fa fa-angle-right"></i></li>{% endif %}
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--PAGE BANNER AREA END-->

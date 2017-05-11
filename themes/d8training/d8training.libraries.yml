@@ -15,6 +15,14 @@ global:
     - core/jquery.once
     - d8training/bootstrap
     - d8training/font-awesome
+    - d8training/preloader
+
+preloader:
+  css:
+    theme:
+      dist/css/preloader.css: {}
+  js:
+    dist/js/preloader.js: {}
 
 header-home:
   css:

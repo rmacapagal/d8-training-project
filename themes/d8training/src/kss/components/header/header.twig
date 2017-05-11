@@ -1,9 +1,17 @@
 <!--START TOP AREA-->
 <header class="top-area" id="home">
 
+  {% if header_banner %}
+    {% if header_banner.image %}<div class="page-banner-bg" style="background-image:url('{{ header_banner.image }}');"></div>{% endif %}
+  {% endif %}
+
   {% include '@d8training/main-menu/main-menu.twig' with main_menu %}
 
-  {% include '@d8training/header-slider/header-slider.twig' with header_slider %}
+  {% if header_banner %}
+    {% include '@d8training/banner/banner.twig' with header_banner %}
+  {% elseif header_slider %}
+    {% include '@d8training/header-slider/header-slider.twig' with header_slider %}
+  {% endif %}
 
 </header>
 <!--END TOP AREA-->

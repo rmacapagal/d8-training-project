@@ -134,31 +134,6 @@ ul#nav ul li:hover a {
   padding: 7px 15px;
 }
 
-.top-bar {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-}
-
-.call-to-action {
-  color: #fff;
-  text-transform: capitalize;
-}
-
-.call-to-action a {
-  color: #fff;
-  letter-spacing: 1px;
-}
-
-.call-to-action p {
-  display: inline-block;
-  margin-bottom: 0;
-  margin-right: 15px;
-  margin-top: 7px;
-}
-
-.call-to-action i {
-  margin-right: 10px;
-}
-
 .is-sticky ul#nav li a {
   padding: 30px 20px;
   color: #1a1a1a;
@@ -184,4 +159,186 @@ ul#nav ul li:hover a {
 
 .is-sticky .navbar-header {
   margin-top: -3px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .navbar-header {
+    margin-top: 0px;
+  }
+  .navbar-header img {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .is-sticky .navbar-header img {
+    width: 80%;
+    margin-top: -5px;
+  }
+  ul#nav li a {
+    padding: 30px 15px;
+    letter-spacing: 0;
+  }
+  .is-sticky ul#nav li a {
+    padding: 20px 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+  .navbar-collapse.collapse.in {
+    display: block !important;
+  }
+  .navbar-header .collapse,
+  .navbar-toggle {
+    border: 2px solid #fff;
+    border-radius: 0;
+    display: block !important;
+  }
+  .is-sticky .navbar-header .collapse,
+  .is-sticky .navbar-toggle {
+    border: 2px solid #1a1a1a;
+  }
+  .is-sticky .navbar-toggle .icon-bar {
+    background: #1a1a1a none repeat scroll 0 0;
+  }
+  .navbar-header {
+    float: none;
+  }
+  .navbar-header {
+    border-bottom: 1px solid #111;
+    margin: 0;
+    padding: 15px 0;
+  }
+  ul#nav {
+    width: 100%;
+    max-height: 200px;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  ul#nav li {
+    float: none;
+  }
+  .navbar-toggle .icon-bar {
+    background: #fff none repeat scroll 0 0;
+  }
+  ul#nav li ul {
+    display: none;
+    opacity: 1;
+    top: inherit;
+    position: static;
+    -webkit-transition: inherit;
+    transition: inherit;
+    -webkit-transform: inherit;
+    transform: inherit;
+    width: 100%;
+  }
+  ul#nav li a {
+    color: #fff;
+  }
+  ul#nav ul li a {
+    padding-left: 30px !important;
+  }
+  .is-sticky ul#nav ul li a {
+    color: #fff;
+  }
+  .navbar-brand {
+    display: none;
+  }
+  .navbar-brand.white {
+    display: block;
+  }
+  ul#nav li a {
+    color: #fff;
+  }
+  ul#nav li.active > a,
+  ul#nav li:hover > a {
+    color: #d0963e;
+  }
+  ul#nav li.active a::before {
+    display: none;
+  }
+  /*------------------*/
+  .mainmenu-area {
+    background: #212324 none repeat scroll 0 0;
+  }
+  .navbar-brand {
+    margin-top: -10px;
+    padding: 8px;
+  }
+  ul#nav li a {
+    padding: 10px;
+  }
+  .is-sticky ul#nav li a {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .navbar-header {
+    border-bottom: 1px solid #111;
+    margin: 0;
+    padding: 15px 0;
+  }
+  .navbar-brand {
+    margin-top: -10px;
+    padding: 8px;
+  }
+  ul#nav {
+    width: 100%;
+    max-height: 200px;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  ul#nav li {
+    float: none;
+  }
+  .mainmenu-area {
+    background: #212324 none repeat scroll 0 0;
+  }
+  ul#nav li a {
+    padding: 10px;
+  }
+  .is-sticky ul#nav li a {
+    padding: 10px;
+  }
+  ul#nav li ul {
+    display: none;
+    opacity: 1;
+    top: inherit;
+    position: static;
+    -webkit-transition: inherit;
+    transition: inherit;
+    -webkit-transform: inherit;
+    transform: inherit;
+    width: 100%;
+  }
+  ul#nav ul li a {
+    padding-left: 30px !important;
+  }
+  .navbar-brand {
+    display: none;
+  }
+  .navbar-brand.white {
+    display: block;
+  }
+  ul#nav li a {
+    color: #fff;
+  }
+  ul#nav li.active > a,
+  ul#nav li:hover > a {
+    color: #d0963e;
+  }
+  ul#nav li.active a::before {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  ul#nav {
+    width: 100%;
+    max-height: 200px;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
 }

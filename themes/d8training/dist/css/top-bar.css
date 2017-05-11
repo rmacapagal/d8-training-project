@@ -1,3 +1,23 @@
+.top-bar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
+
+.call-to-action {
+  color: #fff;
+  text-transform: capitalize; }
+
+.call-to-action a {
+  color: #fff;
+  letter-spacing: 1px; }
+
+.call-to-action p {
+  display: inline-block;
+  margin-bottom: 0;
+  margin-right: 15px;
+  margin-top: 7px; }
+
+.call-to-action i {
+  margin-right: 10px; }
+
 .top-social-bookmark {
   float: right; }
 
@@ -42,5 +62,15 @@
 .book-table-popup a:hover {
   background: #fff none repeat scroll 0 0;
   color: #d0963e; }
+
+@media only screen and (max-width: 767px) {
+  .call-to-action {
+    display: none; }
+  .top-social-bookmark ul li a {
+    width: 33px; }
+  .top-social-bookmark {
+    float: left; }
+  .book-table-popup a {
+    padding: 15px 10px; } }
 
 /*# sourceMappingURL=top-bar.css.map */

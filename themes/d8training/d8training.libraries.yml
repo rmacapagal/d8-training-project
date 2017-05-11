@@ -1,9 +1,9 @@
 global:
   css:
     theme:
-      vendor-dist/css/normalize.css: {}
-      vendor-dist/css/animate.css: {}
-      vendor-dist/css/responsive.css: {}
+      owl-dist/css/normalize.css: {}
+      owl-dist/css/animate.css: {}
+      owl-dist/css/responsive.css: {}
       dist/css/global.css: {}
       dist/css/main.css: {}
   js:
@@ -66,34 +66,34 @@ top-bar:
 bootstrap:
   css:
     theme:
-      vendor-dist/css/bootstrap.min.css: {}
+      owl-dist/css/bootstrap.min.css: {}
   js:
-    vendor-dist/js/vendor/bootstrap.min.js: {}
+    owl-dist/js/vendor/bootstrap.min.js: {}
 
 font-awesome:
   css:
     theme:
-      vendor-dist/css/font-awesome.min.css: {}
+      owl-dist/css/font-awesome.min.css: {}
 
 owl-carousel:
   css:
     theme:
-      vendor-dist/css/owl.carousel.css: {}
+      owl-dist/css/owl.carousel.css: {}
   js:
-    vendor-dist/js/owl.carousel.min.js: {}
+    owl-dist/js/owl.carousel.min.js: {}
 
 pogo-slider:
   css:
     theme:
-      vendor-dist/css/pogo-slider.css: {}
+      owl-dist/css/pogo-slider.css: {}
   js:
-    vendor-dist/js/jquery.pogo-slider.js: {}
+    owl-dist/js/jquery.pogo-slider.js: {}
 
 jquery-sticky:
   js:
-    vendor-dist/js/jquery.sticky.js: {}
+    owl-dist/js/jquery.sticky.js: {}
 
 wow:
   js:
-    vendor-dist/js/wow.min.js: {}
+    owl-dist/js/wow.min.js: {}
     dist/js/wow.js: {}

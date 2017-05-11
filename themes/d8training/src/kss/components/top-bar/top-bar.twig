@@ -1,0 +1,28 @@
+<div class="top-bar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 col-lg-6 col-sm-8">
+        <div class="call-to-action">
+          {% if email %}<p><i class="fa fa-envelope-o"></i>Email: <a href="mailto:{{ email }}">{{ email }}</a></p>{% endif %}
+          {% if telephone %}<p><i class="fa fa-phone"></i>Telephone: <a href="tel:{{ telephone }}">{{ telephone }}</a></p>{% endif %}
+        </div>
+      </div>
+      <div class="col-md-5 col-lg-6 col-sm-4">
+        {% if cta %}<div class="book-table-popup">
+          <a href="{{ cta_url }}">{{ cta }}</a>
+        </div>{% endif %}
+        {% if socials %}
+        <div class="top-social-bookmark">
+          <ul>
+            {% if socials.facebook %}<li><a href="{{ socials.facebook }}" target="_blank"><i class="fa fa-facebook"></i></a></li>{% endif %}
+            {% if socials.twitter %}<li><a href="{{ socials.twitter }}" target="_blank"><i class="fa fa-twitter"></i></a></li>{% endif %}
+            {% if socials.dribble %}<li><a href="{{ socials.dribble }}" target="_blank"><i class="fa fa-dribbble"></i></a></li>{% endif %}
+            {% if socials.behance %}<li><a href="{{ socials.behance }}" target="_blank"><i class="fa fa-behance"></i></a></li>{% endif %}
+            {% if socials.rss %}<li><a href="{{ socials.rss }}" target="_blank"><i class="fa fa-feed"></i></a></li>{% endif %}
+          </ul>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,110 @@
+{
+  "main_menu": {
+    "home_url": "/",
+    "primary_logo": "../../src/kss/components/main-menu/img/main_logo.png",
+    "secondary_logo": "../../src/kss/components/main-menu/img/main_logo_black.png",
+    "top_bar": {
+      "email": "info@Owl Restaurant.com",
+      "telephone": "+1 800 234 5678",
+      "cta": "Book a table",
+      "cta_url": "reservation.html",
+      "socials": {
+        "facebook": "#",
+        "twitter": "#",
+        "dribble": "#",
+        "behance": "#",
+        "rss": "#"
+      }
+    },
+    "menu_items": [
+      {
+        "name": "Home",
+        "url": "#"
+      },
+      {
+        "name": "About Us",
+        "url": "#",
+        "active": true,
+        "sub_menu": [
+          {
+            "name": "Item 1",
+            "url": "#",
+            "active": true
+          },
+          {
+            "name": "Item 2",
+            "url": "#"
+          },
+          {
+            "name": "Item 3",
+            "url": "#"
+          }
+        ]
+      },
+      {
+        "name": "Pages",
+        "url": "#",
+        "sub_menu": [
+          {
+            "name": "Item 1",
+            "url": "#",
+            "active": true
+          },
+          {
+            "name": "Item 2",
+            "url": "#"
+          },
+          {
+            "name": "Item 3",
+            "url": "#"
+          }
+        ]
+      },
+      {
+        "name": "Reservation",
+        "url": "#"
+      },
+      {
+        "name": "Events",
+        "url": "#"
+      },
+      {
+        "name": "Menu",
+        "url": "#"
+      },
+      {
+        "name": "Blog",
+        "url": "#"
+      },
+      {
+        "name": "Contact",
+        "url": "#"
+      }
+    ]
+  },
+  "header_slider": {
+    "items": [
+      {
+        "title": "Welcome to",
+        "sub_title": "<span>OWL</span> Cafe &amp; Restaurant",
+        "cta": "Reservation Now",
+        "cta_url": "reservation.html",
+        "image": "../../src/kss/components/header-slider/img/slide_1.jpg"
+      },
+      {
+        "title": "Our menus",
+        "sub_title": "See What's <span>new</span> today",
+        "cta": "Todays Menu",
+        "cta_url": "#menu",
+        "image": "../../src/kss/components/header-slider/img/slide_2.jpg"
+      },
+      {
+        "title": "Get ready",
+        "sub_title": "to <span>Join</span> with us",
+        "cta": "Book A Table",
+        "cta_url": "reservation.html",
+        "image": "../../src/kss/components/header-slider/img/slide_3.jpg"
+      }
+    ]
+  }
+}

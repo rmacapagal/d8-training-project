@@ -1,0 +1,49 @@
+<!--FOOER AREA-->
+<div class="footer-area">
+  <div class="container wow fadeIn">
+    <div class="row">
+      <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+        <div class="footer-top section-padding text-center">
+          <div class="footer-logo">
+            {% if image %}<a href="{{ home_url }}"><img src="{{ image }}" alt=""></a>{% endif %}
+          </div>
+          <div class="footer-address">
+            {% if address %}<p>{{ address }}</p>{% endif %}
+            {% if email %}<p><a href="mailto:{{ email }}">{{ email }}</a></p>{% endif %}
+            {% if telephone %}<p><a href="tel:{{ telephone }}">{{ telephone }}</a></p>{% endif %}
+          </div>
+          <div class="footer-social-bookmark">
+            <ul>
+              {% if socials.facebook %}<li><a href="{{ socials.facebook }}" target="_blank"><i class="fa fa-facebook"></i></a></li>{% endif %}
+              {% if socials.twitter %}<li><a href="{{ socials.twitter }}" target="_blank"><i class="fa fa-twitter"></i></a></li>{% endif %}
+              {% if socials.dribble %}<li><a href="{{ socials.dribble }}" target="_blank"><i class="fa fa-dribbble"></i></a></li>{% endif %}
+              {% if socials.google_plus %}<li><a href="{{ socials.google_plus }}" target="_blank"><i class="fa fa-google-plus"></i></a></li>{% endif %}
+              {% if socials.flickr %}<li><a href="{{ socials.flickr }}" target="_blank"><i class="fa fa-flickr"></i></a></li>{% endif %}
+              {% if socials.pinterest %}<li><a href="{{ socials.pinterest }}" target="_blank"><i class="fa fa-pinterest"></i></a></li>{% endif %}
+              {% if socials.skype %}<li><a href="{{ socials.skype }}" target="_blank"><i class="fa fa-skype"></i></a></li>{% endif %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+        <div class="footer-menu">
+          {% if footer_menu %}
+          <ul>
+            {% for item in menu_items %}
+            <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+        <div class="footer-copyright">
+          {{ copyright|raw }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--FOOER AREA END-->

@@ -1,0 +1,1 @@
+{"version":3,"sources":["header.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,mBAAmB;EACnB,YAAY,EAAE","file":"header.css","sourcesContent":[".top-area {\n  height: 100%;\n  position: relative;\n  width: 100%; }\n"]}

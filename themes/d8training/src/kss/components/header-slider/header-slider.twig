@@ -1,0 +1,13 @@
+<!--HHOME SLIDER AREA-->
+<div class="slider-area">
+  <div class="pogoSlider">
+    {% for item in items %}
+    <div class="pogoSlider-slide" data-transition="fade" {% if loop.index == 1 %} data-duration="1500"{% endif %} style="background:url({{ item.image }}) no-repeat scroll 0 0 / cover;">
+      <h2 class="pogoSlider-slide-element" data-in="expand" data-out="expand" data-duration="700">{{ item.title }}</h2>
+      <h1 class="pogoSlider-slide-element" data-in="expand" data-out="expand" data-duration="1500">{{ item.sub_title|raw }}</h1>
+      <h3 class="pogoSlider-slide-element" data-in="expand" data-out="expand" data-duration="2300"><a href="{{ item.cta_url }}">{{ item.cta }}</a></h3>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<!--HOME SLIDER AREA END-->

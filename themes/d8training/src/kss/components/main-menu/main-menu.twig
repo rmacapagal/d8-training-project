@@ -1,0 +1,50 @@
+<div class="header-top-area">
+
+  {% include '@d8training/top-bar/top-bar.twig' with top_bar %}
+
+  <!--MAINMENU AREA-->
+  <div class="mainmenu-area" id="mainmenu-area">
+    <div class="mainmenu-area-bg"></div>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="collapsed navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-example-js-navbar-scrollspy">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="{{ home_url }}" class="navbar-brand"><img src="{{ secondary_logo }}" alt="logo"></a>
+          <a href="{{ home_url }}" class="navbar-brand white"><img src="{{ primary_logo }}" alt="logo"></a>
+        </div>
+        <div class="collapse navbar-collapse bs-example-js-navbar-scrollspy">
+
+          {% include '@d8training/search/search.twig' %}
+          
+          {% if menu_items %}
+            <ul id="nav" class="nav navbar-nav cl-effect-11">
+              {% for item in menu_items %}
+                <li{% if item.active %} class="active"{% endif %}>
+                  <a{% if item.sub_menu %} class="at-drop-down"{% endif %} href="{{ item.url }}">
+                    {{ item.name }}
+                    {% if item.sub_menu %}<i class="hidden-md hidden-lg fa fa-angle-down"></i>{% endif %}
+                  </a>
+                  {% if item.sub_menu %}
+                    <ul class="sub-menu">
+                      {% for subitem in item.sub_menu %}
+                        <li{% if item.active %} class="active"{% endif %}>
+                          <a href="{{ subitem.url }}">{{ subitem.name }}</a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!--END MAINMENU AREA END-->
+</div>

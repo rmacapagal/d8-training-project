@@ -109,8 +109,7 @@ gulp.task('build:js', function() {
 gulp.task('build:kss', function() {
   var options = {
     source: [
-      'src/kss/components',
-      'src/kss/pages'
+      'src/kss/components'
     ],
     destination: 'dist/style-guide',
     builder: 'src/kss/builder',

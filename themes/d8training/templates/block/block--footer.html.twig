@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Theme override to display a block.
+ * Theme override to display 'Footer' block.
  *
  * Available variables:
  * - plugin_id: The ID of the block implementation.
@@ -22,37 +22,29 @@
  * - title_suffix: Additional output populated by modules, intended to be
  *   displayed after the main title tag that appears in the template.
  *
- * @see template_preprocess_block()
  */
 #}
 {{ attach_library('d8training/footer') }}
 
-{% set menu_items = [] %}
-{% for item in content['#footer']['#items'] %}
-  {% set menu_items = menu_items|merge([{
-    'url': item.url,
-    'name': item.title,
-    'active': item.in_active_trail
-  }]) %}
+{% set social_items = [] %}
+{% set field_social_network = pre_render(content.field_social_network) %}
+{% for item in field_social_network.items %}
+    {%
+      set social_item = {
+        'type': item.field_social_type["#items"].getString(),
+        'url': item.field_link.items.0["#url"].getUri()
+      }
+    %}
+  {% set social_items = social_items|merge([social_item]) %}
 {% endfor %}
 
 {% include '@d8training/footer/footer.twig' with {
-  "home_url": content['#home_url'],
-  "image": file_url(content['#image'].uri.value),
-  "address": content['#address'],
-  "email": content['#email'],
-  "telephone": content['#telephone'],
-  "copyright": content['#copyright'],
-  "socials": {
-    "facebook": content['#socials'].facebook,
-    "twitter": content['#socials'].twitter,
-    "dribble": content['#socials'].dribble,
-    "pinterest": content['#socials'].pinterest,
-    "google_plus": content['#socials'].google_plus,
-    "flickr": content['#socials'].flickr,
-    "skype": content['#socials'].skype,
-    "behance": content['#socials'].behance,
-    "rss": content['#socials'].rss
-  },
-  "footer_menu": menu_items
+  "home_url": content.home_url,
+  "image": file_url(content.field_footer_logo['#items'].entity.uri.value),
+  "address": content.field_address["#items"].getString(),
+  "email": content.field_email.0["#context"].value,
+  "telephone": content.field_telephone.0["#context"].value,
+  "copyright": content.field_copyright.0["#text"],
+  "social_items": social_items,
+  "footer_menu": content.menus
 } only %}

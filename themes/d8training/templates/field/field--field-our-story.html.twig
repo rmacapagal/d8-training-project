@@ -1,0 +1,16 @@
+{{ attach_library('d8training/about') }}
+
+{% set content = pre_render(items.0.content) %}
+
+{% include '@d8training/about/about.twig' with {
+  "title": "Our <span>Story</span>",
+  "exerpt": content.field_excerpt.0['#context'].value,
+  "cta": {
+    "text": "Read more",
+    "url": path(content.field_content.0["#url"].getRouteName(), {
+      'node': content.field_content.0["#url"].getRouteParameters().node
+    })
+  },
+  "image_left": file_url(content.field_left_image['#items'].entity.uri.value),
+  "image_right": file_url(content.field_right_image['#items'].entity.uri.value)
+} only %}

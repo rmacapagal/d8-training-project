@@ -34,7 +34,7 @@ content:
     type: image_image
     region: content
   field_sub_title:
-    weight: 1
+    weight: 0
     settings:
       size: 60
       placeholder: ''
@@ -42,7 +42,7 @@ content:
     type: string_textfield
     region: content
   field_title:
-    weight: 0
+    weight: 1
     settings:
       size: 60
       placeholder: ''

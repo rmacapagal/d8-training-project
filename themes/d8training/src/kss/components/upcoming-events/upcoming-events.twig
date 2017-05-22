@@ -1,0 +1,34 @@
+<section class="event-area section-padding">
+  <div class="event-area-bg" style="background-image: url('{{ background_image }}')"></div>
+  <div class="container wow fadeIn">
+    <div class="row">
+      <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+        <div class="area-title text-center">
+          <h2>{{ pre_title }}</h2>
+          <h3>{{ title }}</h3>
+        </div>
+      </div>
+    </div>
+    <div class="row event-list">
+      <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+        {% for item in items %}
+        <div class="single-event">
+          <div class="event-img">
+            <img src="{{ item.image.src }}" alt="{{ item.image.alt }}">
+          </div>
+          <div class="event-content">
+            <div class="event-date">
+              <p><span>{{ item.date.day }}</span>{{ item.date.month }}</p>
+            </div>
+            <div class="event-details">
+              <h3><a href="single-event.html">{{ item.title }}</a></h3>
+              <p class="event-meta"><a href="#">{{ item.date.full }}</a>- {{ item.location }}</p>
+              <p>{{ item.description }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

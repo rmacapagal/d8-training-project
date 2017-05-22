@@ -1,0 +1,36 @@
+{{ attach_library('d8training/featured-blog') }}
+
+{% set news_items = [] %}
+
+{% for item in items %}
+  {% set content = pre_render(item.content) %}
+
+  {% set news_item = {
+    "category": {
+      "name": content.field_category.0['#title'],
+      "url": path(
+        content.field_category.0["#url"].getRouteName(), {
+        'taxonomy_term': content.field_category.0["#url"].getRouteParameters().taxonomy_term
+      })
+    },
+    "title": content.title.0['#context'].value,
+    "url": path(
+      'entity.node.canonical', {
+      'node': content.node.id
+    }),
+    "image": {
+      "src": file_url(content.field_featured_image['#items'].entity.uri.value),
+      "alt": content.field_featured_image['#items'].alt
+    },
+    "published_date": content.field_date.items.0['#markup'],
+    "total_comments": 5
+  } %}
+  {% set news_items = news_items|merge([news_item]) %}
+
+{% endfor %}
+
+{% include '@d8training/featured-blog/featured-blog.twig' with {
+  "pre_title": "News",
+  "title": "From The Blog",
+  "items": news_items
+} only %}

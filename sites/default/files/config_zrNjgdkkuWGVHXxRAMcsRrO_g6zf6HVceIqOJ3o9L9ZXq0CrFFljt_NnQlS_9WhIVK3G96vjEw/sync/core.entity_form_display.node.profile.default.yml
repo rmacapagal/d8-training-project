@@ -3,18 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.profile.field_behance_link
     - field.field.node.profile.field_description
-    - field.field.node.profile.field_dribble_link
-    - field.field.node.profile.field_facebook_link
     - field.field.node.profile.field_image
-    - field.field.node.profile.field_instagram_link
-    - field.field.node.profile.field_twitter_link
+    - field.field.node.profile.field_social_accounts
     - image.style.thumbnail
     - node.type.profile
   module:
     - image
-    - link
+    - paragraphs
     - path
 id: node.profile.default
 targetEntityType: node
@@ -27,14 +23,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_behance_link:
-    weight: 10
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
   field_description:
     weight: 7
     settings:
@@ -42,22 +30,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
-    region: content
-  field_dribble_link:
-    weight: 12
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
-  field_facebook_link:
-    weight: 8
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
     region: content
   field_image:
     weight: 6
@@ -67,28 +39,18 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
-  field_instagram_link:
-    weight: 11
+  field_social_accounts:
+    type: entity_reference_paragraphs
+    weight: 26
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
-    type: link_default
     region: content
-  field_twitter_link:
-    weight: 9
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
-  langcode:
-    type: language_select
-    weight: 2
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   path:
     type: path
     weight: 5

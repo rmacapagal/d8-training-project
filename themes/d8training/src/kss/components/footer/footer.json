@@ -5,17 +5,44 @@
   "email": "info@Owl Restaurant.com",
   "telephone": "+1 800 234 5678",
   "copyright": "<p>&copy; 2017 <a href=\"#\">Owl Restaurant</a> All Right Reserved. Coded by <a href=\"http://themeforest.net/user/bdexpert\">BDEXPERT</a>.</p>",
-  "socials": {
-    "facebook": "#",
-    "twitter": "#",
-    "dribble": "#",
-    "pinterest": "#",
-    "google_plus": "#",
-    "flickr": "#",
-    "skype": "#",
-    "behance": "#",
-    "rss": "#"
-  },
+  "social_items": [
+    { 
+      "type": "facebook", 
+      "url": "#"
+    },
+    { 
+      "type": "twitter", 
+      "url": "#"
+    },
+    { 
+      "type": "dribbble", 
+      "url": "#"
+    },
+    { 
+      "type": "pinterest", 
+      "url": "#"
+    },
+    { 
+      "type": "google-plus", 
+      "url": "#"
+    },
+    { 
+      "type": "flickr", 
+      "url": "#"
+    },
+    { 
+      "type": "skype", 
+      "url": "#"
+    },
+    { 
+      "type": "behance", 
+      "url": "#"
+    },
+    { 
+      "type": "rss", 
+      "url": "#"
+    }
+  ],
   "footer_menu": [
     {
       "name": "Teams of use",

@@ -11,7 +11,7 @@ entity_type: paragraph
 bundle: special_promo_item
 label: 'Product Code'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

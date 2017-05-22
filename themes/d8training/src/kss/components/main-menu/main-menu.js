@@ -4,6 +4,19 @@
   Drupal.behaviors.mainMenu = {
     attach: function (context) {
 
+      /*---------------------------
+        SMOOTH SCROLL
+      -----------------------------*/
+      $('.navbar-header a, ul#nav a', context).on('click', function (event) {
+        var id = $(this).attr("href");
+        var offset = 40;
+        var target = $(id).offset().top - offset;
+        $('html, body').animate({
+          scrollTop: target
+        }, 1500, "easeInOutExpo");
+        event.preventDefault();
+      });
+
       /* -------------------------
           STICKY MAINMENU
       ------------------------- */

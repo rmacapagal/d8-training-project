@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Theme override to display a block.
+ * Theme override to display 'Header' block.
  *
  * Available variables:
  * - plugin_id: The ID of the block implementation.
@@ -27,60 +27,49 @@
 #}
 {{ attach_library('d8training/header-home') }}
 
-{% set menu_items = [] %}
-{% for item in content['#header_menu']['#items'] %}
-  {% set sub_menu = [] %}
-
-  {% if item.below|length > 0 %}
-    {% for item2 in item.below %}
-      {% set sub_menu = sub_menu|merge([{
-        'url': item2.url,
-        'text': item2.title,
-        'active': item2.in_active_trail
-      }]) %} }}
-    {% endfor %}
-  {% endif %}
-
-  {% set menu_items = menu_items|merge([{
-    'url': item.url,
-    'name': item.title,
-    'active': item.in_active_trail,
-    'sub_menu': sub_menu
-  }]) %}
+{% set social_items = [] %}
+{% set field_social_network = pre_render(content.field_social_network) %}
+{% for item in field_social_network.items %}
+    {%
+      set social_item = {
+        'type': item.field_social_type["#items"].getString(),
+        'url': item.field_link.items.0["#url"].getUri()
+      }
+    %}
+  {% set social_items = social_items|merge([social_item]) %}
 {% endfor %}
 
-{% if content['#header_slider'] %}
-  {% set slider_items = [] %}
-  {% for item in content['#header_slider'] %}
-    {% set slider_items = slider_items|merge([{
-      'title': item.title.0.value,
-      'sub_title': item.sub_title.0.value,
-      'image': file_url(item.image.uri.value),
-      'cta_url': item.cta.0.getUrl(),
-      'cta': item.cta.0.title
-    }]) %}
-  {% endfor %}
-{% endif %}
+{% set slider_items = [] %}
+{% for key, item in content.field_header %}
+    {%
+      set slider_item = {
+        "pre_title": content.field_header[key].entity.field_sub_title.value,
+        "title": content.field_header[key].entity.field_title.value,
+        "cta": {
+          "text": content.field_header[key].entity.field_call_to_action.value.0.title,
+          "url": content.field_header[key].entity.field_call_to_action.value.0.uri
+        },
+        "image": file_url(content.field_header[key].entity.field_image.entity.uri.value)
+      }
+    %}
+  {% set slider_items = slider_items|merge([slider_item]) %}
+{% endfor %}
 
 {% include '@d8training/header/header.twig' with {
   "main_menu": {
-    "home_url": content['#home_url'],
-    "primary_logo": file_url(content['#primary_logo'].uri.value),
-    "secondary_logo": file_url(content['#secondary_logo'].uri.value),
+    "home_url": content.home_url,
+    "primary_logo": file_url(content.field_primary_logo['#items'].entity.uri.value),
+    "secondary_logo": file_url(content.field_secondary_logo['#items'].entity.uri.value),
     "top_bar": {
-      "email": content['#email'],
-      "telephone": content['#telephone'],
-      "cta": content['#cta'],
-      "cta_url": content['#cta_url'],
-      "socials": {
-        "facebook": content['#socials'].facebook,
-        "twitter": content['#socials'].twitter,
-        "dribble": content['#socials'].dribble,
-        "behance": content['#socials'].behance,
-        "rss": content['#socials'].rss
-      }
+      "email": content.field_email.0["#context"].value,
+      "telephone": content.field_telephone.0["#context"].value,
+      "cta": {
+        "text": content.field_button.0["#title"],
+        "url": content.field_button.0["#url"]
+      },
+      "social_items": social_items
     },
-    "menu_items": menu_items
+    "menu_items": content.menus
   },
   "header_slider": {
     "items": slider_items

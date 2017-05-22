@@ -4,6 +4,19 @@
   Drupal.behaviors.headerSlider = {
     attach: function (context) {
 
+      /*---------------------------
+        SMOOTH SCROLL
+      -----------------------------*/
+      $('.slider-area h3 a', context).on('click', function (event) {
+        var id = $(this).attr("href");
+        var offset = 40;
+        var target = $(id).offset().top - offset;
+        $('html, body').animate({
+          scrollTop: target
+        }, 1500, "easeInOutExpo");
+        event.preventDefault();
+      });
+
       /*-----------------------------
         SLIDER ACTIVE
       ------------------------------*/

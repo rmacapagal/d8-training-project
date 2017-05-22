@@ -1,0 +1,73 @@
+<?php
+/**
+ * @file
+ * Contains d8training_module.module..
+ */
+use Drupal\Core\Block\BlockPluginInterface;
+use Drupal\d8training_module\SimpleMenu;
+use Drupal\paragraphs\Entity\Paragraph;
+
+/**
+* Implements hook_block_view_alter().
+*/
+function d8training_module_block_view_alter(array &$build, BlockPluginInterface $block) {
+  if ($build['#id'] == 'footer' || $build['#id'] == 'header') {
+    $build['#pre_render'][] = '_d8training_module_custom_block_pre_render';
+  }
+}
+
+/**
+ * Custom Block pre-render callback
+ */
+function _d8training_module_custom_block_pre_render(array $build) {
+  $id = $build['#id'];
+  $menu_map = ['header' => 'main', 'footer' => 'footer'];
+  $menu_id  = $menu_map[$id];
+  $simpleMenu = new SimpleMenu();
+  $menus = $simpleMenu->getMenu($menu_id);
+  $build['content']['menus'] = $menus['items'];
+  $build['content']['home_url'] = base_path();
+
+  $node = \Drupal::routeMatch()->getParameter('node');  
+  if ($node->bundle() == 'home') {
+    $build['content']['field_header'] = $node->get('field_header');
+  }
+
+  return $build;
+}
+
+/**
+* Implements hook_preprocess_node().
+*/
+function d8training_module_preprocess_node(&$variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node->bundle() == 'home') {
+    // Instagram Feed block
+    $instagram_feed = \Drupal::service('plugin.manager.block')->createInstance('d8t_instagram_feed', []);
+    $variables['content']['instagram_feed'] = $instagram_feed->build();
+
+    // Today's Menu block
+    $todays_menu = \Drupal::service('plugin.manager.block')->createInstance('d8t_todays_menu', []);
+    $variables['content']['todays_menu'] = $todays_menu->build();
+
+    // Upcoming Events block
+    $block_id = 6;
+    $block = \Drupal::entityManager()->getStorage('block_content')->load($block_id);
+    $todays_menu = \Drupal::entityManager()->getViewBuilder('block_content')->view($block);
+    $variables['content']['todays_menu'] = $todays_menu;
+  }
+}
+
+/**
+* Implements hook_theme().
+*/
+function d8training_module_theme($existing, $type, $theme, $path) {
+  return [
+    'd8t_instagram_feed' => [
+      'variables' => [],
+    ],
+    'd8t_todays_menu' => [
+      'variables' => [],
+    ],
+  ];
+}

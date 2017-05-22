@@ -1,0 +1,35 @@
+{{ attach_library('d8training/featured-profile') }}
+
+{% set profiles = [] %}
+
+{% for item in items %}
+  {% set content = pre_render(item.content) %}
+
+  {% set social_items = [] %}
+  {% for social_account in content.field_social_accounts.items|slice(0, 5) %}
+    {% set social_item = { 
+      'type': social_account.field_social_type["#items"].getString(),
+      'url': social_account.field_link.items.0["#url"].getUri()
+    } %}
+    {% set social_items = social_items|merge([social_item]) %}
+  {% endfor %}
+
+  {% set profile = {
+    "name": content.title["#items"].getString(),
+    "description": content.field_description.0['#context'].value,
+    "image": {
+      "src": file_url(content.field_image['#items'].entity.uri.value),
+      "alt": content.field_image['#items'].alt
+    },
+    "socials": social_items
+  } %}
+
+  {% set profiles = profiles|merge([profile]) %}
+
+{% endfor %}
+
+{% include '@d8training/featured-profile/featured-profile.twig' with {
+  "pre_title": "Delicious",
+  "title": "Awesome Chefs",
+  "items": profiles
+} only %}

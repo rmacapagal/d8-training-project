@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff|Lato:100,300,400,400i,700,900");
-
+@import url('https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff|Lato:100,300,400,400i,700,900');
 .alignleft {
   float: left;
   margin-right: 15px;
@@ -19,16 +18,16 @@ a {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   color: #212324;
+}
 
-  &:hover {
-    color: #c1934c;
-  }
+a:hover {
+  color: #c1934c;
+}
 
-  &:focus,
-  &:hover {
-    outline: 0 solid;
-    text-decoration: none;
-  }
+a:focus,
+a:hover {
+  outline: 0 solid;
+  text-decoration: none;
 }
 
 img {
@@ -48,12 +47,12 @@ h6 {
 
 html,
 body {
-  height: 100%;
+  height: 100%
 }
 
 body {
   color: #555555;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 0.3px;
@@ -61,24 +60,25 @@ body {
 }
 
 a:hover {
-  text-decoration: none;
+  text-decoration: none
 }
+
 
 /* Remove Chrome Input Field's Unwanted Yellow Background Color */
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
 }
 
 .navbar-toggle {
   border: 2px solid #fff;
   border-radius: 0;
+}
 
-  .icon-bar {
-    background: #fff none repeat scroll 0 0;
-  }
+.navbar-toggle .icon-bar {
+  background: #fff none repeat scroll 0 0;
 }
 
 .is-sticky .navbar-header .collapse,
@@ -92,25 +92,25 @@ input:-webkit-autofill:focus {
 
 .area-title {
   margin-bottom: 60px;
+}
 
-  h2 {
-    color: #d0963e;
-    display: inline-block;
-    font-family: "Herr Von Muellerhoff", cursive;
-    font-size: 80px;
-    margin: 0;
-    padding: 0 10px;
-    position: relative;
-    text-transform: capitalize;
-    letter-spacing: 2px;
-  }
+.area-title h2 {
+  color: #d0963e;
+  display: inline-block;
+  font-family: "Herr Von Muellerhoff", cursive;
+  font-size: 80px;
+  margin: 0;
+  padding: 0 10px;
+  position: relative;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
 
-  h3 {
-    color: #212324;
-    font-size: 40px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
+.area-title h3 {
+  color: #212324;
+  font-size: 40px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .section-padding {
@@ -135,4 +135,22 @@ input:-webkit-autofill:focus {
 
 .gray-bg {
   background: #f3f4f4;
+}
+
+a.read-more {
+  border: 1px solid;
+  color: #d0963e;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-top: 30px;
+  padding: 7px 23px;
+  text-transform: uppercase;
+}
+
+.read-more:hover {
+  background: #d0963e;
+  color: #fff;
+  border-color: #d0963e;
 }

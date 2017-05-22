@@ -1,0 +1,39 @@
+<!--TEAM AREA-->
+<section class="team-area section-padding">
+  <div class="container wow fadeIn">
+    <div class="row">
+      <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+        <div class="area-title text-center">
+          <h2>{{ pre_title }}</h2>
+          <h3>{{ title }}</h3>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 team-slider">
+        {% for item in items %}
+        <div class="single-team-member text-center">
+          <div class="team-member-img ">
+            <img src="{{ item.image.src }}" alt="{{ item.image.alt }}">
+            <div class="member-social-bookmark">
+
+              {% if item.socials %}
+              <ul>
+                {% for social_item in item.socials %}
+                <li><a href="{{ social_item.url }}" target="_blank"><i class="fa fa-{{ social_item.type }}"></i></a></li>
+                {% endfor %}
+              </ul>
+              {% endif %}
+            </div>
+          </div>
+          <div class="member-details">
+            <h3>{{ item.name }}</h3>
+            <p>{{ item.description }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<!--TEAM AREA END-->

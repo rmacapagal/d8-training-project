@@ -2,10 +2,7 @@ global:
   css:
     theme:
       owl-dist/css/normalize.css: {}
-      owl-dist/css/animate.css: {}
-      owl-dist/css/responsive.css: {}
       dist/css/global.css: {}
-      dist/css/main.css: {}
   js:
     dist/js/global.js: {}
   dependencies: 
@@ -13,9 +10,13 @@ global:
     - core/drupal
     - core/drupalSettings
     - core/jquery.once
+    - d8training/modernizr
     - d8training/bootstrap
+    - d8training/jquery.easing
+    - d8training/jquery-migrate
     - d8training/font-awesome
     - d8training/preloader
+    - d8training/scroll-to-top
 
 preloader:
   css:
@@ -59,6 +60,13 @@ main-menu:
   dependencies:
     - d8training/jquery-sticky
 
+scroll-to-top:
+  css:
+    theme:
+      dist/css/scroll-to-top.css: {}
+  js:
+    dist/js/scroll-to-top.js: {}
+
 search:
   css:
     theme:
@@ -71,6 +79,56 @@ top-bar:
     theme:
       dist/css/top-bar.css: {}
 
+
+about:
+  css:
+    theme:
+      dist/css/about.css: {}
+      
+featured-blog:
+  css:
+    theme:
+      dist/css/featured-blog.css: {}
+      
+featured-profile:
+  css:
+    theme:
+      dist/css/featured-profile.css: {}
+  js:
+    dist/js/featured-profile.js: {}
+  dependencies:
+    - d8training/owl-carousel
+      
+instagram-feed:
+  css:
+    theme:
+      dist/css/instagram-feed.css: {}
+  js:
+    dist/js/instagram-feed.js: {}
+  dependencies:
+    - d8training/spectragram
+      
+promotions:
+  css:
+    theme:
+      dist/css/promotions.css: {}
+
+todays-menu:
+  css:
+    theme:
+      dist/css/todays-menu.css: {}
+  js:
+    dist/js/todays-menu.js: {}
+  dependencies:
+    - d8training/jquery-mixitup
+    - d8training/jquery-magnific-popup
+      
+upcoming-events:
+  css:
+    theme:
+      dist/css/upcoming-events.css: {}
+    
+
 bootstrap:
   css:
     theme:
@@ -82,6 +140,30 @@ font-awesome:
   css:
     theme:
       owl-dist/css/font-awesome.min.css: {}
+
+jquery.easing:
+  js:
+    owl-dist/js/vendor/jquery.easing.1.3.js: {}
+
+jquery-magnific-popup:
+  js:
+    owl-dist/js/jquery.magnific-popup.min.js: {}
+
+jquery-migrate:
+  js:
+    owl-dist/js/vendor/jquery-migrate-1.2.1.min.js: {}
+
+jquery-mixitup:
+  js:
+    owl-dist/js/jquery.mixitup.min.js: {}
+
+jquery-sticky:
+  js:
+    owl-dist/js/jquery.sticky.js: {}
+
+modernizr:
+  js:
+    owl-dist/js/vendor/modernizr-2.8.3.min.js: {}
 
 owl-carousel:
   css:
@@ -97,11 +179,19 @@ pogo-slider:
   js:
     owl-dist/js/jquery.pogo-slider.js: {}
 
-jquery-sticky:
+spectragram:
   js:
-    owl-dist/js/jquery.sticky.js: {}
+    owl-dist/js/spectragram.js: {}
+
+waypoints:
+  js:
+    owl-dist/js/vendor/waypoints.min.js: {}
 
 wow:
+  css:
+    theme:
+      owl-dist/css/animate.css: {}
   js:
     owl-dist/js/wow.min.js: {}
     dist/js/wow.js: {}
+    

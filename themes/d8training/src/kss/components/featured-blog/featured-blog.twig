@@ -1,0 +1,30 @@
+<!--BLOG AREA-->
+<section class="blog-area section-padding">
+  <div class="container wow fadeIn">
+    <div class="row">
+      <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+        <div class="area-title text-center">
+          <h2>{{ pre_title }}</h2>
+          <h3>{{ title }}</h3>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      {% for item in items %}
+      <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+        <div class="single-post text-center">
+          <div class="blog-post-img ">
+            <img src="{{ item.image.src }}" alt="{{ item.image.alt }}">
+          </div>
+          <div class="post-details">
+            <a href="{{ item.category.url }}" class="post-meta-button">{{ item.category.name }}</a>
+            <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
+            <p class="post-meta"><a href="#">{{ item.published_date }}</a> - <a href="#">{{ item.total_comments }} Comments</a></p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!--BLOG AREA END-->

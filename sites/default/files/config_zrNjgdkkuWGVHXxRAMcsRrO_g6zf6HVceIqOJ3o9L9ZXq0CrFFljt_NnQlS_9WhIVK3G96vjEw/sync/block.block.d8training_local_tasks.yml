@@ -9,7 +9,7 @@ _core:
 id: d8training_local_tasks
 theme: d8training
 region: content
-weight: -5
+weight: -4
 provider: null
 plugin: local_tasks_block
 settings:

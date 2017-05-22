@@ -1,13 +1,30 @@
 {
   "email": "info@Owl Restaurant.com",
   "telephone": "+1 800 234 5678",
-  "cta": "Book a table",
-  "cta_url": "reservation.html",
-  "socials": {
-    "facebook": "#",
-    "twitter": "#",
-    "dribble": "#",
-    "behance": "#",
-    "rss": "#"
-  }
+  "cta": {
+    "text": "Book a table",
+    "url": "reservation.html"
+  },
+  "social_items": [
+    { 
+      "type": "facebook", 
+      "url": "#"
+    },
+    { 
+      "type": "twitter", 
+      "url": "#"
+    },
+    { 
+      "type": "dribbble", 
+      "url": "#"
+    },
+    { 
+      "type": "behance", 
+      "url": "#"
+    },
+    { 
+      "type": "rss", 
+      "url": "#"
+    }
+  ]
 }

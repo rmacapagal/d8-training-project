@@ -4,6 +4,16 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_content
+    - node.type.about
+    - node.type.article
+    - node.type.blogs
+    - node.type.contact
+    - node.type.event
+    - node.type.events
+    - node.type.home
+    - node.type.menu_landing
+    - node.type.profile
+    - node.type.reservation
     - paragraphs.paragraphs_type.our_story
 id: paragraph.our_story.field_content
 field_name: field_content
@@ -11,16 +21,26 @@ entity_type: paragraph
 bundle: our_story
 label: Content
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:node'
   handler_settings:
-    target_bundles: {  }
+    target_bundles:
+      about: about
+      article: article
+      blogs: blogs
+      contact: contact
+      event: event
+      events: events
+      home: home
+      menu_landing: menu_landing
+      profile: profile
+      reservation: reservation
     sort:
       field: _none
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: about
 field_type: entity_reference

@@ -3,48 +3,20 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.speakers.field_behance_link
-    - field.field.paragraph.speakers.field_dribble_link
-    - field.field.paragraph.speakers.field_facebook_link
     - field.field.paragraph.speakers.field_image
-    - field.field.paragraph.speakers.field_instagram_link
     - field.field.paragraph.speakers.field_position
+    - field.field.paragraph.speakers.field_social_accounts
     - field.field.paragraph.speakers.field_speaker_name
-    - field.field.paragraph.speakers.field_twitter_link
     - image.style.thumbnail
     - paragraphs.paragraphs_type.speakers
   module:
     - image
-    - link
+    - paragraphs
 id: paragraph.speakers.default
 targetEntityType: paragraph
 bundle: speakers
 mode: default
 content:
-  field_behance_link:
-    weight: 5
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
-  field_dribble_link:
-    weight: 7
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
-  field_facebook_link:
-    weight: 3
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
   field_image:
     weight: 1
     settings:
@@ -52,14 +24,6 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
-    region: content
-  field_instagram_link:
-    weight: 6
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
     region: content
   field_position:
     weight: 2
@@ -69,6 +33,18 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_social_accounts:
+    type: entity_reference_paragraphs
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
   field_speaker_name:
     weight: 0
     settings:
@@ -76,14 +52,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_twitter_link:
-    weight: 4
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
     region: content
 hidden:
   created: true

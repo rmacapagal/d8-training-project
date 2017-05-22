@@ -4,12 +4,15 @@ status: true
 dependencies:
   config:
     - field.field.node.article.body
+    - field.field.node.article.field_category
+    - field.field.node.article.field_date
     - field.field.node.article.field_featured_image
     - field.field.node.article.field_hero_image
     - field.field.node.article.field_hero_text
     - field.field.node.article.field_tags
     - node.type.article
   module:
+    - datetime
     - image
     - text
     - user
@@ -27,6 +30,23 @@ content:
     settings: {  }
     third_party_settings: {  }
     label: hidden
+  field_category:
+    weight: 6
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_date:
+    weight: 7
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
   field_featured_image:
     weight: 3
     label: above
@@ -66,5 +86,4 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  langcode: true
+hidden: {  }

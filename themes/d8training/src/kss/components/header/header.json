@@ -8,13 +8,28 @@
       "telephone": "+1 800 234 5678",
       "cta": "Book a table",
       "cta_url": "reservation.html",
-      "socials": {
-        "facebook": "#",
-        "twitter": "#",
-        "dribble": "#",
-        "behance": "#",
-        "rss": "#"
-      }
+      "social_items": [
+        { 
+          "type": "facebook", 
+          "url": "#"
+        },
+        { 
+          "type": "twitter", 
+          "url": "#"
+        },
+        { 
+          "type": "dribbble", 
+          "url": "#"
+        },
+        { 
+          "type": "behance", 
+          "url": "#"
+        },
+        { 
+          "type": "rss", 
+          "url": "#"
+        }
+      ]
     },
     "menu_items": [
       {
@@ -85,39 +100,31 @@
   "header_slider": {
     "items": [
       {
-        "title": "Welcome to",
-        "sub_title": "<span>OWL</span> Cafe &amp; Restaurant",
-        "cta": "Reservation Now",
-        "cta_url": "reservation.html",
+        "pre_title": "Welcome to",
+        "title": "<span>OWL</span> Cafe &amp; Restaurant",
+        "cta": {
+          "text": "Reservation Now",
+          "url": "reservation.html"
+        },
         "image": "../../src/kss/components/header-slider/img/slide_1.jpg"
       },
       {
-        "title": "Our menus",
-        "sub_title": "See What's <span>new</span> today",
-        "cta": "Todays Menu",
-        "cta_url": "#menu",
+        "pre_title": "Our menus",
+        "title": "See What's <span>new</span> today",
+        "cta": {
+          "text": "Todays Menu",
+          "url": "#menu"
+        },
         "image": "../../src/kss/components/header-slider/img/slide_2.jpg"
       },
       {
-        "title": "Get ready",
-        "sub_title": "to <span>Join</span> with us",
-        "cta": "Book A Table",
-        "cta_url": "reservation.html",
+        "pre_title": "Get ready",
+        "title": "to <span>Join</span> with us",
+        "cta": {
+          "text": "Book A Table",
+          "url": "reservation.html"
+        },
         "image": "../../src/kss/components/header-slider/img/slide_3.jpg"
-      }
-    ]
-  },
-  "header_banner": {
-    "image": "../../src/kss/components/header-banner/img/about_page_banner.jpg",
-    "title": "About <span>Us</span>",
-    "breadcrumbs": [
-      {
-        "name": "Home",
-        "url": "/"
-      },
-      {
-        "name": "About Us",
-        "url": "/about"
       }
     ]
   }

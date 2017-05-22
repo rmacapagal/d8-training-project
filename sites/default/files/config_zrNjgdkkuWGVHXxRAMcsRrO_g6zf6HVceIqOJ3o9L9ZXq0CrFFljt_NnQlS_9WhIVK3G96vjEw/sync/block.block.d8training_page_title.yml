@@ -9,7 +9,7 @@ _core:
 id: d8training_page_title
 theme: d8training
 region: content
-weight: -5
+weight: -4
 provider: null
 plugin: page_title_block
 settings:

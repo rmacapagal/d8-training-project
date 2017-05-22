@@ -1,0 +1,157 @@
+{
+  "pre_title": "Delicious",
+  "title": "Todays's menu",
+  "categories": [
+    {
+      "name": "Breakfast",
+      "slug": "breakfast"
+    },
+    {
+      "name": "Lunch",
+      "slug": "lunch"
+    },
+    {
+      "name": "Dinner",
+      "slug": "dinner"
+    },
+    {
+      "name": "Coffee",
+      "slug": "coffee"
+    },
+    {
+      "name": "Snacks",
+      "slug": "snacks"
+    }
+  ],
+  "items": [
+    {
+      "title": "Cupcake Recipes",
+      "price": "$120.00",
+      "image": {
+        "src": "../../src/kss/components/todays-menu/img/menu_1.jpg",
+        "alt": "menu_1.jpg"
+      },
+      "thumbnail": {
+        "src": "../../src/kss/components/todays-menu/img/menu_1.jpg",
+        "alt": "menu_1.jpg"
+      },
+      "categories": [
+        "breakfast",
+        "coffee",
+        "snacks"
+      ]
+    },
+    {
+      "title": "Cupcake Recipes",
+      "price": "$120.00",
+      "image": {
+        "src": "../../src/kss/components/todays-menu/img/menu_2.jpg",
+        "alt": "menu_2.jpg"
+      },
+      "thumbnail": {
+        "src": "../../src/kss/components/todays-menu/img/menu_2.jpg",
+        "alt": "menu_2.jpg"
+      },
+      "categories": [
+        "dinner",
+        "snacks"
+      ]
+    },
+    {
+      "title": "Cupcake Recipes",
+      "price": "$120.00",
+      "image": {
+        "src": "../../src/kss/components/todays-menu/img/menu_3.jpg",
+        "alt": "menu_3.jpg"
+      },
+      "thumbnail": {
+        "src": "../../src/kss/components/todays-menu/img/menu_3.jpg",
+        "alt": "menu_3.jpg"
+      },
+      "categories": [
+        "breakfast"
+      ]
+    },
+    {
+      "title": "Cupcake Recipes",
+      "price": "$120.00",
+      "image": {
+        "src": "../../src/kss/components/todays-menu/img/menu_4.jpg",
+        "alt": "menu_4.jpg"
+      },
+      "thumbnail": {
+        "src": "../../src/kss/components/todays-menu/img/menu_4.jpg",
+        "alt": "menu_4.jpg"
+      },
+      "categories": [
+        "dinner",
+        "lunch",
+        "breakfast",
+        "snacks"
+      ]
+    },
+    {
+      "title": "Cupcake Recipes",
+      "price": "$120.00",
+      "image": {
+        "src": "../../src/kss/components/todays-menu/img/menu_5.jpg",
+        "alt": "menu_5.jpg"
+      },
+      "thumbnail": {
+        "src": "../../src/kss/components/todays-menu/img/menu_5.jpg",
+        "alt": "menu_5.jpg"
+      },
+      "categories": [
+        "lunch",
+        "coffee"
+      ]
+    },
+    {
+      "title": "Cupcake Recipes",
+      "price": "$120.00",
+      "image": {
+        "src": "../../src/kss/components/todays-menu/img/menu_6.jpg",
+        "alt": "menu_6.jpg"
+      },
+      "thumbnail": {
+        "src": "../../src/kss/components/todays-menu/img/menu_6.jpg",
+        "alt": "menu_6.jpg"
+      },
+      "categories": [
+        "breakfast"
+      ]
+    },
+    {
+      "title": "Cupcake Recipes",
+      "price": "$120.00",
+      "image": {
+        "src": "../../src/kss/components/todays-menu/img/menu_7.jpg",
+        "alt": "menu_7.jpg"
+      },
+      "thumbnail": {
+        "src": "../../src/kss/components/todays-menu/img/menu_7.jpg",
+        "alt": "menu_7.jpg"
+      },
+      "categories": [
+        "lunch",
+        "dinner"
+      ]
+    },
+    {
+      "title": "Cupcake Recipes",
+      "price": "$120.00",
+      "image": {
+        "src": "../../src/kss/components/todays-menu/img/menu_8.jpg",
+        "alt": "menu_8.jpg"
+      },
+      "thumbnail": {
+        "src": "../../src/kss/components/todays-menu/img/menu_8.jpg",
+        "alt": "menu_8.jpg"
+      },
+      "categories": [
+        "lunch",
+        "dinner"
+      ]
+    }
+  ]
+}

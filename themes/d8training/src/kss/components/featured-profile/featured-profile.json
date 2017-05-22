@@ -1,0 +1,156 @@
+{
+  "pre_title": "Delicious",
+  "title": "Awesome Chefs",
+  "items": [
+    {
+      "name": "Mark Angelila",
+      "description": "Cras senunc massa quisque tempor dolor sit amet",
+      "image": {
+        "src": "../../src/kss/components/featured-profile/img/team-1.jpg",
+        "alt": "team-1.jpg"
+      },
+      "socials": [
+        { 
+          "type": "facebook", 
+          "url": "#"
+        },
+        { 
+          "type": "twitter", 
+          "url": "#"
+        },
+        { 
+          "type": "dribbble", 
+          "url": "#"
+        },
+        { 
+          "type": "pinterest", 
+          "url": "#"
+        },
+        { 
+          "type": "google-plus", 
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "name": "Angel Meskat",
+      "description": "Cras senunc massa quisque tempor dolor sit amet",
+      "image": {
+        "src": "../../src/kss/components/featured-profile/img/team-2.jpg",
+        "alt": "team-2.jpg"
+      },
+      "socials": [
+        { 
+          "type": "facebook", 
+          "url": "#"
+        },
+        { 
+          "type": "twitter", 
+          "url": "#"
+        },
+        { 
+          "type": "dribbble", 
+          "url": "#"
+        },
+        { 
+          "type": "pinterest", 
+          "url": "#"
+        },
+        { 
+          "type": "google-plus", 
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "name": "Jon Doe",
+      "description": "Cras senunc massa quisque tempor dolor sit amet",
+      "image": {
+        "src": "../../src/kss/components/featured-profile/img/team-3.jpg",
+        "alt": "team-3.jpg"
+      },
+      "socials": [
+        { 
+          "type": "facebook", 
+          "url": "#"
+        },
+        { 
+          "type": "twitter", 
+          "url": "#"
+        },
+        { 
+          "type": "dribbble", 
+          "url": "#"
+        },
+        { 
+          "type": "pinterest", 
+          "url": "#"
+        },
+        { 
+          "type": "google-plus", 
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "name": "Angel Di Maria",
+      "description": "Cras senunc massa quisque tempor dolor sit amet",
+      "image": {
+        "src": "../../src/kss/components/featured-profile/img/team-4.jpg",
+        "alt": "team-4.jpg"
+      },
+      "socials": [
+        { 
+          "type": "facebook", 
+          "url": "#"
+        },
+        { 
+          "type": "twitter", 
+          "url": "#"
+        },
+        { 
+          "type": "dribbble", 
+          "url": "#"
+        },
+        { 
+          "type": "pinterest", 
+          "url": "#"
+        },
+        { 
+          "type": "google-plus", 
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "name": "Park Ji Sung",
+      "description": "Cras senunc massa quisque tempor dolor sit amet",
+      "image": {
+        "src": "../../src/kss/components/featured-profile/img/team-5.jpg",
+        "alt": "team-5.jpg"
+      },
+      "socials": [
+        { 
+          "type": "facebook", 
+          "url": "#"
+        },
+        { 
+          "type": "twitter", 
+          "url": "#"
+        },
+        { 
+          "type": "dribbble", 
+          "url": "#"
+        },
+        { 
+          "type": "pinterest", 
+          "url": "#"
+        },
+        { 
+          "type": "google-plus", 
+          "url": "#"
+        }
+      ]
+    }
+  ]
+}

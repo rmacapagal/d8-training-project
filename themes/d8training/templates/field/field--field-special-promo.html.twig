@@ -1,0 +1,29 @@
+{{ attach_library('d8training/promotions') }}
+
+{% set content = pre_render(items.0.content) %}
+{% set special_items = [] %}
+
+{% for item in content.field_items['#items'] %}
+  {%
+    set item = {
+      "title": item.entity.field_title.value,
+      "image": {
+        "src": file_url(item.entity.field_image.entity.uri.value),
+        "alt": item.entity.field_image.alt
+      },
+      "cost": "$" ~ item.entity.field_cost.value|number_format(0),
+      "promo_code": item.entity.field_product_code.value
+    }
+  %}
+  {% set special_items = special_items|merge([item]) %}
+{% endfor %}
+
+{# 
+ #}
+
+{% include '@d8training/promotions/promotions.twig' with {
+  "pre_title": "Specials",
+  "title": "Specials Promotion",
+  "background_image": file_url(content.field_image['#items'].entity.uri.value),
+  "items": special_items
+} only %}

@@ -1,0 +1,24 @@
+.about-area .area-title h2 {
+  font-size: 80px;
+  padding-bottom: 10px;
+  position: relative; }
+
+.about-area .area-title h2 span {
+  color: #212324;
+  font-family: lato;
+  font-size: 48px;
+  text-transform: uppercase; }
+
+.about-area .area-title h2::after {
+  background: #c1934c none repeat scroll 0 0;
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  width: 50px; }
+
+.about-content {
+  color: #4a4d4f; }
+
+/*# sourceMappingURL=about.css.map */

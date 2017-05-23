@@ -1,16 +1,21 @@
 <!--START TOP AREA-->
-<header class="top-area" id="home">
+{% set class = is_home ? '' : ' single-page' %}
+<header class="top-area {{ class }}" id="home">
 
-  {% if header_banner %}
-    {% if header_banner.image %}<div class="page-banner-bg" style="background-image:url('{{ header_banner.image }}');"></div>{% endif %}
+  {% if not is_home %}
+    {% if header_banner and header_banner.image %}<div class="page-banner-bg" style="background-image:url('{{ header_banner.image }}');"></div>{% endif %}
   {% endif %}
 
   {% include '@d8training/main-menu/main-menu.twig' with main_menu %}
 
-  {% if header_banner %}
-    {% include '@d8training/banner/banner.twig' with header_banner %}
-  {% elseif header_slider %}
-    {% include '@d8training/header-slider/header-slider.twig' with header_slider %}
+  {% if not is_home %}
+    {% if header_banner %}
+      {% include '@d8training/banner/banner.twig' with header_banner %}
+    {% endif %}
+  {% else %}
+    {% if header_slider %}
+      {% include '@d8training/header-slider/header-slider.twig' with header_slider %}
+    {% endif %}
   {% endif %}
 
 </header>

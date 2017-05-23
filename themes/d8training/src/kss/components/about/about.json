@@ -1,10 +1,17 @@
 {
+  "is_video": false,
   "title": "Our <span>Story</span>",
   "exerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
   "cta": {
     "text": "Read more",
     "url": "#"
   },
-  "image_left": "../../src/kss/components/about/img/about_one.jpg",
-  "image_right": "../../src/kss/components/about/img/about_two.jpg"
+  "image_left": {
+    "src": "../../src/kss/components/about/img/about_one.jpg",
+    "alt": "about_one.jpg"
+  },
+  "image_right": {
+    "src": "../../src/kss/components/about/img/about_two.jpg",
+    "alt": "about_two.jpg"
+  }
 }

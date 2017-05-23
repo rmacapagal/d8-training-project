@@ -1,7 +1,7 @@
 (function (Drupal, $) {
   'use strict';
 
-  Drupal.behaviors.mainMenu = {
+  Drupal.behaviors.search = {
     attach: function (context) {
 
       /* ----------------------------

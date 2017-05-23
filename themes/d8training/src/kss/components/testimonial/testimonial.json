@@ -1,0 +1,23 @@
+{
+  "background_image": {
+    "src": "../../src/kss/components/testimonial/img/testmonial.jpg",
+    "alt": "testmonial.jpg"
+  },
+  "items": [
+    {
+      "text": "Nothing in life is to be feared, it's to be understood. Now is the time to understand more, so that we may fear less – Marie Curie",
+      "author": "John Doe",
+      "position": "Creative Designer"
+    },
+    {
+      "text": "Nothing in life is to be feared, it's to be understood. Now is the time to understand more, so that we may fear less – Marie Curie",
+      "author": "John Doe",
+      "position": "Creative Designer"
+    },
+    {
+      "text": "Nothing in life is to be feared, it's to be understood. Now is the time to understand more, so that we may fear less – Marie Curie",
+      "author": "John Doe",
+      "position": "Creative Designer"
+    }
+  ]
+}

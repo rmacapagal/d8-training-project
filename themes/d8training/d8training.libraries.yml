@@ -25,12 +25,11 @@ preloader:
   js:
     dist/js/preloader.js: {}
 
-header-home:
+header:
   css:
     theme:
       dist/css/header.css: {}
   dependencies:
-    - d8training/header-slider
     - d8training/top-bar
     - d8training/main-menu
     - d8training/search
@@ -40,6 +39,14 @@ footer:
     theme:
       dist/css/footer.css: {}
   dependencies:
+    - d8training/wow
+
+header-banner:
+  css:
+    theme:
+      dist/css/header-banner.css: {}
+  dependencies:
+    - d8training/banner
     - d8training/wow
 
 header-slider:
@@ -84,7 +91,26 @@ about:
   css:
     theme:
       dist/css/about.css: {}
+  js:
+    dist/js/about.js: {}
+  dependencies:
+    - d8training/jquery-magnific-popup
+
+banner:
+  css:
+    theme:
+      dist/css/banner.css: {}
       
+counter:
+  css:
+    theme:
+      dist/css/counter.css: {}
+  js:
+    dist/js/counter.js: {}
+  dependencies:
+    - d8training/wow
+    - d8training/jquery-counterup
+
 featured-blog:
   css:
     theme:
@@ -112,6 +138,16 @@ promotions:
   css:
     theme:
       dist/css/promotions.css: {}
+
+testimonial:
+  css:
+    theme:
+      dist/css/testimonial.css: {}
+  js:
+    dist/js/testimonial.js: {}
+  dependencies:
+    - d8training/owl-carousel
+    - d8training/wow
 
 todays-menu:
   css:
@@ -141,11 +177,20 @@ font-awesome:
     theme:
       owl-dist/css/font-awesome.min.css: {}
 
+jquery-counterup:
+  js:
+    owl-dist/js/jquery.counterup.min.js: {}
+  dependencies:
+    - d8training/waypoints
+
 jquery.easing:
   js:
     owl-dist/js/vendor/jquery.easing.1.3.js: {}
 
 jquery-magnific-popup:
+  css:
+    theme:
+      owl-dist/css/magnific-popup.css: {}
   js:
     owl-dist/js/jquery.magnific-popup.min.js: {}
 
@@ -185,7 +230,7 @@ spectragram:
 
 waypoints:
   js:
-    owl-dist/js/vendor/waypoints.min.js: {}
+    owl-dist/js/waypoints.min.js: {}
 
 wow:
   css:

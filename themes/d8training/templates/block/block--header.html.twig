@@ -25,7 +25,12 @@
  * @see template_preprocess_block()
  */
 #}
-{{ attach_library('d8training/header-home') }}
+{{ attach_library('d8training/header') }}
+{% if content.is_home %}
+  {{ attach_library('d8training/header-slider') }}
+{% else %}
+  {{ attach_library('d8training/header-banner') }}
+{% endif %}
 
 {% set social_items = [] %}
 {% set field_social_network = pre_render(content.field_social_network) %}
@@ -39,25 +44,10 @@
   {% set social_items = social_items|merge([social_item]) %}
 {% endfor %}
 
-{% set slider_items = [] %}
-{% for key, item in content.field_header %}
-    {%
-      set slider_item = {
-        "pre_title": content.field_header[key].entity.field_sub_title.value,
-        "title": content.field_header[key].entity.field_title.value,
-        "cta": {
-          "text": content.field_header[key].entity.field_call_to_action.value.0.title,
-          "url": content.field_header[key].entity.field_call_to_action.value.0.uri
-        },
-        "image": file_url(content.field_header[key].entity.field_image.entity.uri.value)
-      }
-    %}
-  {% set slider_items = slider_items|merge([slider_item]) %}
-{% endfor %}
-
-{% include '@d8training/header/header.twig' with {
+{% set data = {
+  "is_home": content.is_home,
   "main_menu": {
-    "home_url": content.home_url,
+    "home_url": url('<front>'),
     "primary_logo": file_url(content.field_primary_logo['#items'].entity.uri.value),
     "secondary_logo": file_url(content.field_secondary_logo['#items'].entity.uri.value),
     "top_bar": {
@@ -70,8 +60,50 @@
       "social_items": social_items
     },
     "menu_items": content.menus
-  },
-  "header_slider": {
-    "items": slider_items
   }
-} only %}
+} %}
+
+{% if content.is_home %}
+  {% set slider_items = [] %}
+  {% for key, item in content.field_header %}
+      {%
+        set slider_item = {
+          "pre_title": content.field_header[key].entity.field_sub_title.value,
+          "title": content.field_header[key].entity.field_title.value,
+          "cta": {
+            "text": content.field_header[key].entity.field_call_to_action.value.0.title,
+            "url": content.field_header[key].entity.field_call_to_action.value.0.uri
+          },
+          "image": file_url(content.field_header[key].entity.field_image.entity.uri.value)
+        }
+      %}
+    {% set slider_items = slider_items|merge([slider_item]) %}
+  {% endfor %}
+
+  {% set data = data|merge({
+    "header_slider": {
+      "items": slider_items
+    }
+  }) %}
+{% else %}
+
+  {% set data = data|merge({
+    "header_banner": {
+      "image": file_url(content.field_header_image.entity.field_hero_image.entity.uri.value),
+      "title": content.field_header_image.entity.field_hero_text.value,
+      "breadcrumbs": [
+        {
+          "name": "Home",
+          "url": url('<front>')
+        },
+        {
+          "name": content.node.title.value,
+          "url": url('<current>')
+        }
+      ]
+    }
+  }) %}
+  
+{% endif %}
+
+{% include '@d8training/header/header.twig' with data only %}

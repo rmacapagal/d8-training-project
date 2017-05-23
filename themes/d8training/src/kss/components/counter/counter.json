@@ -1,0 +1,28 @@
+{
+  "background_image": {
+    "src": "../../src/kss/components/counter/img/about_counter_bgr.jpg",
+    "alt": "about_counter_bgr.jpg"
+  },
+  "items": [
+    {
+      "text": "Daily Meal",
+      "total": 25000,
+      "classes": "fa fa-heart-o"
+    },
+    {
+      "text": "Happy Clients",
+      "total": 56000,
+      "classes": "fa fa-smile-o"
+    },
+    {
+      "text": "Parcel Today",
+      "total": 66000,
+      "classes": "fa fa-cutlery-o"
+    },
+    {
+      "text": "Online Store",
+      "total": 78000,
+      "classes": "fa fa-map-o"
+    }
+  ]
+}

@@ -1,14 +1,14 @@
 {
-	"image": "../../src/kss/components/header-banner/img/about_page_banner.jpg",
-	"title": "About <span>Us</span>",
-	"breadcrumbs": [
-		{
-			"name": "Home",
-			"url": "/"
-		},
-		{
-			"name": "About Us",
-			"url": "/about"
-		}
-	]
+  "image": "../../src/kss/components/header-banner/img/about_page_banner.jpg",
+  "title": "About <span>Us</span>",
+  "breadcrumbs": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "name": "About Us",
+      "url": "/about"
+    }
+  ]
 }

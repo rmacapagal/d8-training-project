@@ -1,4 +1,5 @@
 {
+  "is_home": false,
   "main_menu": {
     "home_url": "/",
     "primary_logo": "../../src/kss/components/main-menu/img/main_logo.png",

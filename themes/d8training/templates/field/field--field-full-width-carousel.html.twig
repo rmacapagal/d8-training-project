@@ -1,0 +1,22 @@
+{{ attach_library('d8training/testimonial') }}
+
+{% set content = pre_render(items.0.content) %}
+
+{% set slider_items = [] %}
+{% for slider_item in content.field_slider.items %}
+  {% set _slider_item = {
+      "text": slider_item.content.field_text.0["#context"].value,
+      "author": slider_item.content.field_author.0["#context"].value,
+      "position": slider_item.content.field_position.0["#context"].value
+    }
+  %}
+  {% set slider_items = slider_items|merge([_slider_item]) %}
+{% endfor %}
+
+{% include '@d8training/testimonial/testimonial.twig' with {
+  "background_image": {
+    "src": file_url(content.field_background_image["#items"].entity.uri.value),
+    "alt": content.field_background_image["#items"].alt
+  },
+  "items": slider_items
+} only %}

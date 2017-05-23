@@ -19,8 +19,10 @@
 <link rel="stylesheet" href="/themes/d8training/owl-dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="/themes/d8training/owl-dist/css/font-awesome.min.css">
 <link rel="stylesheet" href="/themes/d8training/owl-dist/css/responsive.css">
+<link rel="stylesheet" href="../css/about-video.css">
 <link rel="stylesheet" href="../css/about.css">
 <link rel="stylesheet" href="../css/banner.css">
+<link rel="stylesheet" href="../css/counter.css">
 <link rel="stylesheet" href="../css/featured-blog.css">
 <link rel="stylesheet" href="../css/featured-profile.css">
 <link rel="stylesheet" href="../css/footer.css">
@@ -35,6 +37,7 @@
 <link rel="stylesheet" href="../css/scroll-to-top.css">
 <link rel="stylesheet" href="../css/search.css">
 <link rel="stylesheet" href="../css/styleguide.css">
+<link rel="stylesheet" href="../css/testimonial.css">
 <link rel="stylesheet" href="../css/todays-menu.css">
 <link rel="stylesheet" href="../css/top-bar.css">
 <link rel="stylesheet" href="../css/upcoming-events.css">
@@ -60,6 +63,16 @@
             </a>
           </li>
                   <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="item-components-about-video.html">
+              <span class="kss-nav__name">About (Video)</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="item-components-counter.html">
+              <span class="kss-nav__name">Counter</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
             <a class="kss-nav__menu-link" href="item-components-featured-blog.html">
               <span class="kss-nav__name">Featured Blog</span>
             </a>
@@ -82,6 +95,11 @@
                   <li class="kss-nav__menu-item">
             <a class="kss-nav__menu-link" href="item-components-promotions.html">
               <span class="kss-nav__name">Promotions</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="item-components-testimonial.html">
+              <span class="kss-nav__name">Testimonial</span>
             </a>
           </li>
                   <li class="kss-nav__menu-item">
@@ -161,27 +179,28 @@
         </div>
         <div class="about-content">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-          <a href="#" class="read-more">Read more</a>
+          <a href="#" class="read-more" >Read more</a>
         </div>
       </div>
-      <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12">
-        <div class="row">
-          <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
-            <div class="about-img">
-              <img src="../../src/kss/components/about/img/about_one.jpg" alt="">
+              <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12">
+          <div class="row">
+            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+              <div class="about-img">
+                <img src="../../src/kss/components/about/img/about_one.jpg" alt="about_one.jpg">
+              </div>
             </div>
-          </div>
-          <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
-            <div class="about-img">
-              <img src="../../src/kss/components/about/img/about_two.jpg" alt="">
+            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+              <div class="about-img">
+                <img src="../../src/kss/components/about/img/about_two.jpg" alt="about_two.jpg">
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+          </div>
   </div>
 </section>
 <!--ABOUT AREA END-->
+
             <div class="kss-modifier__example-footer"></div>
           </div>
 
@@ -201,27 +220,37 @@
         &lt;/div&gt;
         &lt;div class=&quot;about-content&quot;&gt;
           &lt;p&gt;{{ exerpt }}&lt;/p&gt;
-          &lt;a href=&quot;{{ cta.url }}&quot; class=&quot;read-more&quot;&gt;{{ cta.text }}&lt;/a&gt;
+          &lt;a href=&quot;{{ cta.url }}&quot; class=&quot;read-more&quot; {{  cta.is_external ? &#039; target=&quot;_blank&quot;&#039; : &#039;&#039; }}&gt;{{ cta.text }}&lt;/a&gt;
         &lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class=&quot;col-md-7 col-lg-7 col-sm-12 col-xs-12&quot;&gt;
-        &lt;div class=&quot;row&quot;&gt;
-          &lt;div class=&quot;col-md-6 col-lg-6 col-sm-6 col-xs-12&quot;&gt;
-            &lt;div class=&quot;about-img&quot;&gt;
-              &lt;img src=&quot;{{ image_left }}&quot; alt=&quot;&quot;&gt;
-            &lt;/div&gt;
+      {% if is_video %}
+        &lt;div class=&quot;col-md-4 col-lg-4 col-md-offset-1 col-lg-offset-1 col-sm-12 col-xs-12 hidden-xs&quot;&gt;
+          &lt;div class=&quot;about-video&quot;&gt;
+            &lt;img src=&quot;{{ image.src }}&quot; alt=&quot;{{ image.alt }}&quot;&gt;
+            &lt;a href=&quot;{{ video.src }}&quot; class=&quot;about-video-button&quot; data-effect=&quot;mfp-zoom-in&quot;&gt;&lt;i class=&quot;fa fa-play&quot;&gt;&lt;/i&gt;&lt;/a&gt;
           &lt;/div&gt;
-          &lt;div class=&quot;col-md-6 col-lg-6 col-sm-6 col-xs-12&quot;&gt;
-            &lt;div class=&quot;about-img&quot;&gt;
-              &lt;img src=&quot;{{ image_right }}&quot; alt=&quot;&quot;&gt;
+        &lt;/div&gt;
+      {% else %}
+        &lt;div class=&quot;col-md-7 col-lg-7 col-sm-12 col-xs-12&quot;&gt;
+          &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col-md-6 col-lg-6 col-sm-6 col-xs-12&quot;&gt;
+              &lt;div class=&quot;about-img&quot;&gt;
+                &lt;img src=&quot;{{ image_left.src }}&quot; alt=&quot;{{ image_left.alt }}&quot;&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-md-6 col-lg-6 col-sm-6 col-xs-12&quot;&gt;
+              &lt;div class=&quot;about-img&quot;&gt;
+                &lt;img src=&quot;{{ image_right.src }}&quot; alt=&quot;{{ image_right.alt }}&quot;&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
           &lt;/div&gt;
         &lt;/div&gt;
-      &lt;/div&gt;
+      {% endif %}
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/section&gt;
-&lt;!--ABOUT AREA END--&gt;</code></pre>
+&lt;!--ABOUT AREA END--&gt;
+</code></pre>
             </details>
           </div>
               
@@ -256,6 +285,8 @@
 <script src="/themes/d8training/owl-dist/js/contact-form.js"></script>
 <script src="/themes/d8training/owl-dist/js/jquery.sticky.js"></script>
 <script src="/themes/d8training/dist/js/wow.js"></script>
+<script src="../js/about.js"></script>
+<script src="../js/counter.js"></script>
 <script src="../js/featured-profile.js"></script>
 <script src="../js/global.js"></script>
 <script src="../js/header-slider.js"></script>
@@ -264,6 +295,7 @@
 <script src="../js/preloader.js"></script>
 <script src="../js/scroll-to-top.js"></script>
 <script src="../js/search.js"></script>
+<script src="../js/testimonial.js"></script>
 <script src="../js/todays-menu.js"></script>
 <script src="../js/wow.js"></script>
 

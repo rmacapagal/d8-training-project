@@ -1,0 +1,32 @@
+{{ attach_library('d8training/counter') }}
+
+{% set content = pre_render(items.0.content) %}
+
+{% include '@d8training/counter/counter.twig' with {
+  "background_image": {
+    "src": file_url(content.field_image['#items'].entity.uri.value),
+    "alt": content.field_image['#items'].alt
+  },
+  "items": [
+    {
+      "text": "Daily Meal",
+      "total": content.field_daily_meal.0["#markup"],
+      "classes": "fa fa-heart-o"
+    },
+    {
+      "text": "Happy Clients",
+      "total": content.field_clients.0["#markup"],
+      "classes": "fa fa-smile-o"
+    },
+    {
+      "text": "Parcel Today",
+      "total": content.field_parcel_today.0["#markup"],
+      "classes": "fa fa-cutlery"
+    },
+    {
+      "text": "Online Store",
+      "total": content.field_online_store.0["#markup"],
+      "classes": "fa fa-map-o"
+    }
+  ]
+} only %}

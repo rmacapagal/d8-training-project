@@ -26,12 +26,16 @@ function _d8training_module_custom_block_pre_render(array $build) {
   $simpleMenu = new SimpleMenu();
   $menus = $simpleMenu->getMenu($menu_id);
   $build['content']['menus'] = $menus['items'];
-  $build['content']['home_url'] = base_path();
 
   $node = \Drupal::routeMatch()->getParameter('node');  
   if ($node->bundle() == 'home') {
     $build['content']['field_header'] = $node->get('field_header');
+    $build['content']['is_home'] = true;
   }
+  else if ($node->bundle() == 'about') {
+    $build['content']['field_header_image'] = $node->get('field_header_image');
+  }
+  $build['content']['node'] = $node;
 
   return $build;
 }

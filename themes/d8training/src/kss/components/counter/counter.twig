@@ -1,0 +1,18 @@
+<!--COUNTER AREA-->
+<div class="counter-area section-padding">
+  <div class="count-area-bg" style="background-image: url('{{ background_image.src }}');"></div>
+  <div class="container wow fadeIn">
+    <div class="row">
+      {% for item in items %}
+      <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
+        <div class="single-counter text-center">
+          <div class="counter-icon"><i class="{{ item.classes }}"></i></div>
+          <h3 class="counter">{{ item.total|number_format(0, '.', ',')  }}</h3>
+          <p>{{ item.text }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<!--COUNTER AREA END-->

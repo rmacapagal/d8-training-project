@@ -1,4 +1,4 @@
-uuid: 0bc28d08-2876-4e38-8ac6-cef7c543d089
+uuid: a64fed74-de69-4bde-a4f3-6349a74389c7
 langcode: en
 status: true
 dependencies:
@@ -25,30 +25,39 @@ settings:
       full_width_carousel: full_width_carousel
     target_bundles_drag_drop:
       data_block:
-        weight: 10
+        weight: 13
         enabled: false
       full_width_carousel:
         enabled: true
-        weight: 11
-      full_width_carousel_item:
-        weight: 12
-        enabled: false
-      hero_landing_single_image:
-        weight: 13
-        enabled: false
-      image_carousel_item:
         weight: 14
-        enabled: false
-      our_story:
+      full_width_carousel_item:
         weight: 15
         enabled: false
-      our_story_video:
+      hero_landing_single_image:
         weight: 16
         enabled: false
-      speakers:
+      image_carousel_item:
         weight: 17
         enabled: false
-      special_promo_item:
+      our_story:
         weight: 18
+        enabled: false
+      our_story_video:
+        weight: 19
+        enabled: false
+      social_item:
+        weight: 20
+        enabled: false
+      speakers:
+        weight: 21
+        enabled: false
+      special_promo:
+        weight: 22
+        enabled: false
+      special_promo_item:
+        weight: 23
+        enabled: false
+      today_s_specials_item:
+        weight: 24
         enabled: false
 field_type: entity_reference_revisions

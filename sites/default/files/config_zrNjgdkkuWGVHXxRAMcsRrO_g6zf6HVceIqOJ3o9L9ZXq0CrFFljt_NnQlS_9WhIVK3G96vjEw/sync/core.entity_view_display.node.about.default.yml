@@ -7,7 +7,7 @@ dependencies:
     - field.field.node.about.field_featured_profiles
     - field.field.node.about.field_full_width_carousel
     - field.field.node.about.field_header_image
-    - field.field.node.about.field_our_story
+    - field.field.node.about.field_our_story_about
     - node.type.about
   module:
     - entity_reference_revisions
@@ -19,7 +19,7 @@ mode: default
 content:
   field_data_block:
     type: entity_reference_revisions_entity_view
-    weight: 103
+    weight: 1
     label: above
     settings:
       view_mode: default
@@ -27,41 +27,32 @@ content:
     third_party_settings: {  }
     region: content
   field_featured_profiles:
-    weight: 104
+    weight: 2
     label: above
     settings:
-      link: true
+      view_mode: featured
+      link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
   field_full_width_carousel:
     type: entity_reference_revisions_entity_view
-    weight: 105
+    weight: 3
     label: above
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
     region: content
-  field_header_image:
+  field_our_story_about:
     type: entity_reference_revisions_entity_view
-    weight: 101
+    weight: 0
     label: above
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
     region: content
-  field_our_story:
-    weight: 102
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
-    region: content
-  links:
-    weight: 100
-    region: content
-hidden: {  }
+hidden:
+  field_header_image: true
+  links: true

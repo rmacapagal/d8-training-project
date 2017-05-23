@@ -5,9 +5,12 @@ dependencies:
   config:
     - field.field.paragraph.data_block.field_clients
     - field.field.paragraph.data_block.field_daily_meal
+    - field.field.paragraph.data_block.field_image
     - field.field.paragraph.data_block.field_online_store
     - field.field.paragraph.data_block.field_parcel_today
     - paragraphs.paragraphs_type.data_block
+  module:
+    - image
 id: paragraph.data_block.default
 targetEntityType: paragraph
 bundle: data_block
@@ -30,6 +33,15 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
+    region: content
+  field_image:
+    weight: 4
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
     region: content
   field_online_store:
     weight: 3

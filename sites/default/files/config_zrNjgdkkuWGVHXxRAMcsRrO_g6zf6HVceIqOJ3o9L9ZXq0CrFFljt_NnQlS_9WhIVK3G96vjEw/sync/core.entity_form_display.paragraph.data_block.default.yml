@@ -5,37 +5,49 @@ dependencies:
   config:
     - field.field.paragraph.data_block.field_clients
     - field.field.paragraph.data_block.field_daily_meal
+    - field.field.paragraph.data_block.field_image
     - field.field.paragraph.data_block.field_online_store
     - field.field.paragraph.data_block.field_parcel_today
+    - image.style.thumbnail
     - paragraphs.paragraphs_type.data_block
+  module:
+    - image
 id: paragraph.data_block.default
 targetEntityType: paragraph
 bundle: data_block
 mode: default
 content:
   field_clients:
-    weight: 1
+    weight: 2
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_daily_meal:
-    weight: 0
+    weight: 1
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
+  field_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
   field_online_store:
-    weight: 3
+    weight: 4
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_parcel_today:
-    weight: 2
+    weight: 3
     settings:
       placeholder: ''
     third_party_settings: {  }

@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.our_story_video.field_call_to_action
     - field.field.paragraph.our_story_video.field_excerpt
     - field.field.paragraph.our_story_video.field_image
     - field.field.paragraph.our_story_video.field_video_link
@@ -16,6 +17,14 @@ targetEntityType: paragraph
 bundle: our_story_video
 mode: default
 content:
+  field_call_to_action:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
   field_excerpt:
     weight: 0
     settings:

@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.our_story.field_content
+    - field.field.paragraph.our_story.field_call_to_action
     - field.field.paragraph.our_story.field_excerpt
     - field.field.paragraph.our_story.field_left_image
     - field.field.paragraph.our_story.field_right_image
@@ -11,19 +11,19 @@ dependencies:
     - paragraphs.paragraphs_type.our_story
   module:
     - image
+    - link
 id: paragraph.our_story.default
 targetEntityType: paragraph
 bundle: our_story
 mode: default
 content:
-  field_content:
-    weight: 4
+  field_call_to_action:
+    weight: 5
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: link_default
     region: content
   field_excerpt:
     weight: 3

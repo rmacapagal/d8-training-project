@@ -3,25 +3,30 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.our_story.field_content
+    - field.field.paragraph.our_story.field_call_to_action
     - field.field.paragraph.our_story.field_excerpt
     - field.field.paragraph.our_story.field_left_image
     - field.field.paragraph.our_story.field_right_image
     - paragraphs.paragraphs_type.our_story
   module:
     - image
+    - link
 id: paragraph.our_story.default
 targetEntityType: paragraph
 bundle: our_story
 mode: default
 content:
-  field_content:
-    weight: 4
+  field_call_to_action:
+    weight: 5
     label: above
     settings:
-      link: true
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
     third_party_settings: {  }
-    type: entity_reference_label
+    type: link_separate
     region: content
   field_excerpt:
     weight: 3

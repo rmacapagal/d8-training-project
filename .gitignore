@@ -47,3 +47,5 @@ core/phpunit.xml
 
 # Ignore node_modules on themes
 themes/*/node_modules
+
+!sites/*/files/config_*

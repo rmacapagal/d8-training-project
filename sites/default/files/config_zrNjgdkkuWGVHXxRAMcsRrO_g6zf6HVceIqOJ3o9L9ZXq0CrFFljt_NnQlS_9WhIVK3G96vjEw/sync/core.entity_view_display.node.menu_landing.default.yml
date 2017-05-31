@@ -14,25 +14,15 @@ targetEntityType: node
 bundle: menu_landing
 mode: default
 content:
-  field_header_image:
-    weight: 101
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
-    region: content
   field_todays_specials:
     type: entity_reference_revisions_entity_view
-    weight: 102
+    weight: 0
     label: above
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
     region: content
-  links:
-    weight: 100
-    region: content
-hidden: {  }
+hidden:
+  field_header_image: true
+  links: true

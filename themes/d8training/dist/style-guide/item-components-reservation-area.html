@@ -158,16 +158,12 @@
 </nav>
 
 <article role="main" class="kss-main">
-          <div id="kssref-components-about" class="kss-section kss-section--depth-2">
+          <div id="kssref-components-reservation-area" class="kss-section kss-section--depth-2">
       <div class="kss-style">
                 <h2 class="kss-title kss-title--level-2">
-          About
+          Reservation Area
         </h2>
 
-                  <div class="kss-description">
-            <p>Used in the homepage</p>
-
-          </div>
         
               </div>
 
@@ -175,38 +171,37 @@
 
           
           <div class="kss-modifier__example">
-            <!--ABOUT AREA-->
-<section class="about-area section-padding">
+            <!--RESERVATION AREA-->
+<section class="reservation-area section-padding">
   <div class="container wow fadeIn">
     <div class="row">
-      <div class="col-md-5 col-lg-5 col-sm-12 col-xs-12">
-        <div class="area-title">
-          <h2>Our <span>Story</span></h2>
-        </div>
-        <div class="about-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-          <a href="#" class="read-more" >Read more</a>
+      <div class="col-md-12 col-lg-12">
+        <div class="area-title text-center">
+          <h2>reservation</h2>
+          <h3>Resrevation Form</h3>
         </div>
       </div>
-              <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12">
-          <div class="row">
-            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
-              <div class="about-img">
-                <img src="../../src/kss/components/about/img/about_one.jpg" alt="about_one.jpg">
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
-              <div class="about-img">
-                <img src="../../src/kss/components/about/img/about_two.jpg" alt="about_two.jpg">
-              </div>
-            </div>
-          </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
+        
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+        <div class="reservation-call-to-action">
+          [object Object]}
         </div>
-          </div>
+      </div>
+      <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+        <div class="reservation-private-text">
+          [object Object]}
+        </div>
+      </div>
+    </div>
   </div>
 </section>
-<!--ABOUT AREA END-->
-
+<!--RESERVATION AREA END-->
             <div class="kss-modifier__example-footer"></div>
           </div>
 
@@ -214,54 +209,44 @@
                   <div class="kss-style">
             <details class="kss-markup">
               <summary>
-                                  Markup: <code>about/about.twig</code>
+                                  Markup: <code>reservation-area/reservation-area.twig</code>
                               </summary>
-              <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;!--ABOUT AREA--&gt;
-&lt;section class=&quot;about-area section-padding&quot;&gt;
+              <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;!--RESERVATION AREA--&gt;
+&lt;section class=&quot;reservation-area section-padding&quot;&gt;
   &lt;div class=&quot;container wow fadeIn&quot;&gt;
     &lt;div class=&quot;row&quot;&gt;
-      &lt;div class=&quot;col-md-5 col-lg-5 col-sm-12 col-xs-12&quot;&gt;
-        &lt;div class=&quot;area-title&quot;&gt;
-          &lt;h2&gt;{{ title|raw }}&lt;/h2&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;about-content&quot;&gt;
-          &lt;p&gt;{{ exerpt }}&lt;/p&gt;
-          &lt;a href=&quot;{{ cta.url }}&quot; class=&quot;read-more&quot; {{  cta.is_external ? &#039; target=&quot;_blank&quot;&#039; : &#039;&#039; }}&gt;{{ cta.text }}&lt;/a&gt;
+      &lt;div class=&quot;col-md-12 col-lg-12&quot;&gt;
+        &lt;div class=&quot;area-title text-center&quot;&gt;
+          &lt;h2&gt;reservation&lt;/h2&gt;
+          &lt;h3&gt;Resrevation Form&lt;/h3&gt;
         &lt;/div&gt;
       &lt;/div&gt;
-      {% if is_video %}
-        &lt;div class=&quot;col-md-4 col-lg-4 col-md-offset-1 col-lg-offset-1 col-sm-12 col-xs-12 hidden-xs&quot;&gt;
-          &lt;div class=&quot;about-video&quot;&gt;
-            &lt;img src=&quot;{{ image.src }}&quot; alt=&quot;{{ image.alt }}&quot;&gt;
-            &lt;a href=&quot;{{ video.src }}&quot; class=&quot;about-video-button&quot; data-effect=&quot;mfp-zoom-in&quot;&gt;&lt;i class=&quot;fa fa-play&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-          &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12&quot;&gt;
+        
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-md-6 col-lg-6 col-sm-12 col-xs-12&quot;&gt;
+        &lt;div class=&quot;reservation-call-to-action&quot;&gt;
+          {{{ left_content }}}
         &lt;/div&gt;
-      {% else %}
-        &lt;div class=&quot;col-md-7 col-lg-7 col-sm-12 col-xs-12&quot;&gt;
-          &lt;div class=&quot;row&quot;&gt;
-            &lt;div class=&quot;col-md-6 col-lg-6 col-sm-6 col-xs-12&quot;&gt;
-              &lt;div class=&quot;about-img&quot;&gt;
-                &lt;img src=&quot;{{ image_left.src }}&quot; alt=&quot;{{ image_left.alt }}&quot;&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;col-md-6 col-lg-6 col-sm-6 col-xs-12&quot;&gt;
-              &lt;div class=&quot;about-img&quot;&gt;
-                &lt;img src=&quot;{{ image_right.src }}&quot; alt=&quot;{{ image_right.alt }}&quot;&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-md-6 col-lg-6 col-sm-12 col-xs-12&quot;&gt;
+        &lt;div class=&quot;reservation-private-text&quot;&gt;
+          {{{ right_content }}}
         &lt;/div&gt;
-      {% endif %}
+      &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/section&gt;
-&lt;!--ABOUT AREA END--&gt;
-</code></pre>
+&lt;!--RESERVATION AREA END--&gt;</code></pre>
             </details>
           </div>
               
               <div class="kss-source kss-style">
-          Source: <code>about/about.scss</code>, line 1
+          Source: <code>reservation-area/reservation-area.scss</code>, line 1
         </div>
           </div>
   </article>

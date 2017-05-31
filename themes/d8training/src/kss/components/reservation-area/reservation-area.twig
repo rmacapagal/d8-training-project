@@ -1,0 +1,31 @@
+<!--RESERVATION AREA-->
+<section class="reservation-area section-padding">
+  <div class="container wow fadeIn">
+    <div class="row">
+      <div class="col-md-12 col-lg-12">
+        <div class="area-title text-center">
+          <h2>{{ form.pre_title }}</h2>
+          <h3>{{ form.title }}</h3>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
+        {{ form.html|raw }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+        <div class="reservation-call-to-action">
+          {{ left_content|raw }}
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+        <div class="reservation-private-text">
+          {{ right_content|raw }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--RESERVATION AREA END-->

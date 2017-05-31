@@ -138,6 +138,13 @@ promotions:
   css:
     theme:
       dist/css/promotions.css: {}
+      
+reservation-area:
+  css:
+    theme:
+      dist/css/reservation-area.css: {}
+  dependencies:
+    - d8training/wow
 
 testimonial:
   css:

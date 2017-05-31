@@ -1,0 +1,46 @@
+{{ attach_library('d8training/reservation-area') }}
+
+{% include '@d8training/reservation-area/reservation-area.twig' with {
+  "form": {
+    "pre_title": "reservation",
+    "title": "Reservation Form",
+    "html": "<form class=\"main-reservaton-form\" action=\"#\" method=\"post\">
+      <div class=\"row\">
+        <div class=\"col-md-6 col-lg-6 col-sm-12 col-xs-12\">
+          <label for=\"reservation_name\"><i class=\"fa fa-user-o\"></i></label>
+          <input type=\"text\" name=\"reservation_name\" id=\"reservation_name\" placeholder=\"Your Name\">
+        </div>
+        <div class=\"col-md-6 col-lg-6 col-sm-12 col-xs-12\">
+          <label for=\"reservation_email\"><i class=\"fa fa-envelope-o\"></i></label>
+          <input type=\"email\" name=\"reservation_email\" id=\"reservation_email\" placeholder=\"Your Email\">
+        </div>
+        <div class=\"col-md-6 col-lg-6 col-sm-12 col-xs-12\">
+          <label for=\"reservation_date\"><i class=\"fa fa-calendar\"></i></label>
+          <input type=\"text\" name=\"reservation_date\" id=\"reservation_date\" placeholder=\"Expected Date\" data-select=\"datepicker\">
+        </div>
+        <div class=\"col-md-6 col-lg-6 col-sm-12 col-xs-12\">
+          <label for=\"reservation_time\"><i class=\"fa fa-clock-o\"></i></label>
+          <input type=\"text\" name=\"reservation_time\" id=\"reservation_time\" placeholder=\"Expected Time\">
+        </div>
+        <div class=\"col-md-6 col-lg-6 col-sm-12 col-xs-12\">
+          <label for=\"reservation_person\"><i class=\"fa fa-user-plus\"></i></label>
+          <input type=\"text\" name=\"reservation_person\" id=\"reservation_person\" placeholder=\"Total Person\">
+        </div>
+        <div class=\"col-md-6 col-lg-6 col-sm-12 col-xs-12\">
+          <label for=\"reservation_phone\"><i class=\"fa fa-phone\"></i></label>
+          <input type=\"text\" name=\"reservation_phone\" id=\"reservation_phone\" placeholder=\"Phone No\">
+        </div>
+        <div class=\"col-md-12 col-lg-12 col-sm-12 col-xs-12\">
+          <label for=\"reservation_message\"><i class=\"fa fa-comment-o\"></i></label>
+          <textarea name=\"reservation_message\" id=\"reservation_message\" cols=\"30\" rows=\"10\"></textarea>
+        </div>
+        <div class=\"col-md-12 col-lg-12 col-sm-12 col-xs-12 text-center\">
+          <button type=\"submit\">BOOK MY TABLE</button>
+          <p>Please submit your reservation detail & We'll contact you to confirm your booking</p>
+        </div>
+      </div>
+    </form>"
+  },
+  "left_content": content.field_left_content,
+  "right_content": content.field_right_content
+} only %}

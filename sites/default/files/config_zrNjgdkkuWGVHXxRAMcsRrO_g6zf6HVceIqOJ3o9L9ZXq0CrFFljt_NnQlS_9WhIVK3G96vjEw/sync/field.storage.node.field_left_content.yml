@@ -1,4 +1,4 @@
-uuid: f8ca5527-6899-48f2-b7e3-09dd32249207
+uuid: ce6ddd66-47ec-49e6-a71d-f703893a8359
 langcode: en
 status: true
 dependencies:
@@ -8,9 +8,8 @@ dependencies:
 id: node.field_left_content
 field_name: field_left_content
 entity_type: node
-type: text
-settings:
-  max_length: 255
+type: text_long
+settings: {  }
 module: text
 locked: false
 cardinality: 1

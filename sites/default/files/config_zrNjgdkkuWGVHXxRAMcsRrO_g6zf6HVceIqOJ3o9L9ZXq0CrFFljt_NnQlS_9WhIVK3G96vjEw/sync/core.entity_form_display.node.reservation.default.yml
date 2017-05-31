@@ -37,18 +37,18 @@ content:
   field_left_content:
     weight: 32
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textfield
+    type: text_textarea
     region: content
   field_right_content:
     weight: 33
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textfield
+    type: text_textarea
     region: content
   path:
     type: path

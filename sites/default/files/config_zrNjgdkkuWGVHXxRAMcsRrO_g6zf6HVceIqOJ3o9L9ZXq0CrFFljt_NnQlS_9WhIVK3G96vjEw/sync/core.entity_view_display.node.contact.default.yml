@@ -6,8 +6,10 @@ dependencies:
     - field.field.node.contact.field_address
     - field.field.node.contact.field_contact_numbers
     - field.field.node.contact.field_email_address
+    - field.field.node.contact.field_header_image
     - node.type.contact
   module:
+    - entity_reference_revisions
     - user
 id: node.contact.default
 targetEntityType: node
@@ -36,6 +38,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
+  field_header_image:
+    weight: 105
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: content
   links:
     weight: 100

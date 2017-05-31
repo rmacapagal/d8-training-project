@@ -6,8 +6,10 @@ dependencies:
     - field.field.node.contact.field_address
     - field.field.node.contact.field_contact_numbers
     - field.field.node.contact.field_email_address
+    - field.field.node.contact.field_header_image
     - node.type.contact
   module:
+    - paragraphs
     - path
 id: node.contact.default
 targetEntityType: node
@@ -43,6 +45,18 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: email_default
+    region: content
+  field_header_image:
+    weight: 35
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
     region: content
   path:
     type: path

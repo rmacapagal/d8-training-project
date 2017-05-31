@@ -51,4 +51,13 @@ settings:
       special_promo_item:
         weight: 18
         enabled: false
+      social_item:
+        weight: 20
+        enabled: false
+      special_promo:
+        weight: 22
+        enabled: false
+      today_s_specials_item:
+        weight: 24
+        enabled: false
 field_type: entity_reference_revisions

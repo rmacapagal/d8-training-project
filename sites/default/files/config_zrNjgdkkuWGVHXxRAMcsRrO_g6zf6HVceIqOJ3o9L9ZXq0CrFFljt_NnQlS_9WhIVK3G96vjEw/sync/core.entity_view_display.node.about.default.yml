@@ -7,7 +7,7 @@ dependencies:
     - field.field.node.about.field_featured_profiles
     - field.field.node.about.field_full_width_carousel
     - field.field.node.about.field_header_image
-    - field.field.node.about.field_our_story_about
+    - field.field.node.about.field_our_story
     - node.type.about
   module:
     - entity_reference_revisions
@@ -44,14 +44,14 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
-  field_our_story_about:
-    type: entity_reference_revisions_entity_view
+  field_our_story:
     weight: 0
     label: above
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: content
 hidden:
   field_header_image: true
